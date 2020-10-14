@@ -5,8 +5,6 @@ I mainly develop frontend for applications using anything that involves modern J
 
 **Frontend**
 
----
-
 ⬛ Angular 2
 
 ⬛ Vue 2 and 3
@@ -15,9 +13,9 @@ I mainly develop frontend for applications using anything that involves modern J
 
 ⬛ NodeJS and ExpressJS
 
-**Backend**
-
 ---
+
+**Backend**
 
 ⬜ Spring
 

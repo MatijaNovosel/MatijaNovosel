@@ -5,7 +5,7 @@ I mainly develop frontend for applications using anything that involves modern J
 
 **Frontend**
 
-⬛ Angular 2
+⬛ Angular
 
 ⬛ Vue 2 and 3
 

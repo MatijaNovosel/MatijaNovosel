@@ -1,1 +1,1 @@
-![](https://s3.amazonaws.com/fullstackfeed/images/vuejs-4.jpg)
+![](https://webdevchallenges.com/wp-content/uploads/2018/08/vue_banner.jpg)

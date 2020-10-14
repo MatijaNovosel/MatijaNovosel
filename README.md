@@ -1,1 +1,1 @@
-![](https://i.imgur.com/e2f7gAH.png)
+![](https://webdevchallenges.com/wp-content/uploads/2018/08/vue_banner.jpg)

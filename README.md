@@ -11,6 +11,8 @@ I mainly develop frontend for applications using anything that involves modern J
 
 ⬛ NodeJS and ExpressJS
 
+⬛ Electron
+
 ---
 
 ⬜ Spring

@@ -3,8 +3,6 @@
 ## Welcome to my GitHub profile
 I mainly develop frontend for applications using anything that involves modern JS, but am experienced with the whole web dev stack, including:
 
-**Frontend**
-
 ⬛ Angular
 
 ⬛ Vue 2 and 3
@@ -14,8 +12,6 @@ I mainly develop frontend for applications using anything that involves modern J
 ⬛ NodeJS and ExpressJS
 
 ---
-
-**Backend**
 
 ⬜ Spring
 

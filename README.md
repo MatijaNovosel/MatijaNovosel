@@ -1,11 +1,12 @@
 ![](https://i.imgur.com/zhfeCzK.png)
 
 ## Welcome to my GitHub profile
-I mainly develop the front end for applications using anything that involves modern JavaScript, but I am experienced with the whole development stack
+Technologies that I work with:
 
 **Frontend**:
+- SASS & SCSS
 - Angular
-- Vue
+- Vue 💞
   - Vuetify, Quasar, PrimeVue, Buefy component libraries
   - Vue 3 (Composition API) and 2
 - jQuery
@@ -16,3 +17,8 @@ I mainly develop the front end for applications using anything that involves mod
 - ASP .NET Core
 - PHP (CakePHP)
 - Node (Nest, TypeORM)
+
+**SQL & NO SQL**:
+- MySQL
+- Microsoft SQL (MSSQL)
+- Firebase & Firestore

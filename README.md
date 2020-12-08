@@ -18,7 +18,8 @@ Technologies that I work with:
 - PHP (CakePHP)
 - Node (Nest, TypeORM)
 
-**SQL & NO SQL**:
+**Other**:
 - MySQL
 - Microsoft SQL (MSSQL)
 - Firebase & Firestore
+- GraphQL

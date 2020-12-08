@@ -12,7 +12,7 @@
 ## Technologies that I work with:
 
 <p align="center">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MatijaNovosel&layout=default&hide_title=true&langs_count=10&exclude_repo=heroesofcrimson" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MatijaNovosel&layout=compact&langs_count=10&exclude_repo=heroesofcrimson&bg_color=10,ff8a00,e52e71&title_color=fff&text_color=fff" />
 </p>
 
 

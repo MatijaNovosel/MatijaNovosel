@@ -14,7 +14,7 @@ Technologies that I work with:
 
 **Backend**:
 - Spring
-- ASP .NET Core
+- ASP .NET Core 3.1+
 - PHP (CakePHP)
 - Node (Nest, TypeORM)
 

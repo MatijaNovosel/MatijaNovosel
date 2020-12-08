@@ -3,7 +3,7 @@
 ## Welcome to my GitHub profile
 I mainly develop the front end for applications using anything that involves modern JavaScript, but I am experienced with the whole development stack
 
-Frontend:
+**Frontend**:
 - Angular
 - Vue
   - Vuetify, Quasar, PrimeVue, Buefy component libraries
@@ -11,7 +11,7 @@ Frontend:
 - jQuery
 - Electron
 
-Backend:
+**Backend**:
 - Spring
 - ASP .NET Core
 - PHP (CakePHP)

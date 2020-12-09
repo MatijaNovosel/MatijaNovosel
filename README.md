@@ -10,6 +10,7 @@
 ## 💻 Technologies that I use:
 
 **🎨 Frontend**:
+- ![](https://img.shields.io/badge/Typescript-informational?style=flat&logo=typescript&logoColor=white&color=007ACC)
 - ![](https://img.shields.io/badge/SASS&SCSS-informational?style=flat&logo=sass&logoColor=white&color=CC6699)
 - ![](https://img.shields.io/badge/Angular-informational?style=flat&logo=angular&logoColor=white&color=DD0031)
 - ![](https://img.shields.io/badge/VueJS-3%20&%202-informational?style=flat&logo=vue.js&logoColor=white&color=2bbc8a)
@@ -24,6 +25,7 @@
 - ![](https://img.shields.io/badge/PHP-informational?style=flat&logo=php&logoColor=white&color=777BB4)
   - ![](https://img.shields.io/badge/CakePHP-informational?style=flat&logo=cakephp&logoColor=white&color=D33C43)
 - ![](https://img.shields.io/badge/NodeJS-informational?style=flat&logo=nodedotjs&logoColor=white&color=339933)
+  - ![](https://img.shields.io/badge/Typescript-informational?style=flat&logo=typescript&logoColor=white&color=007ACC)
   - ![](https://img.shields.io/badge/NestJS&TypeORM-informational?style=flat&logo=nestjs&logoColor=E0234E&color=black)
 
 **🔗 Other**:
@@ -31,3 +33,4 @@
 - ![](https://img.shields.io/badge/TSQL-informational?style=flat&logo=microsoft-sql-server&logoColor=white&color=CC2927)
 - ![](https://img.shields.io/badge/Firebase&Firestore-informational?style=flat&logo=firebase&logoColor=f6820d&color=FFCA28)
 - ![](https://img.shields.io/badge/GraphQL-informational?style=flat&logo=graphql&logoColor=fd43c0&color=E10098)
+- ![](https://img.shields.io/badge/JSON%20Web%20Tokens-informational?style=flat&logo=json-web-tokens&logoColor=E10098&color=000000)

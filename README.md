@@ -1,10 +1,16 @@
+## Welcome to my profile
+
 <p align="center">
 <img src="https://i.imgur.com/zhfeCzK.png"/>
 </p>
 
 ## Technologies that I work with:
 
-**Frontend**:
+<p align="left">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MatijaNovosel&layout=compact&langs_count=10&exclude_repo=heroesofcrimson&theme=dark&hide_title=true" />
+</p>
+
+**🎨 Frontend**:
 - SASS & SCSS
 - Angular
 - Vue 💞
@@ -13,18 +19,14 @@
 - jQuery
 - Electron
 
-**Backend**:
+**🔧 Backend**:
 - Spring
 - ASP .NET Core 3.1+
 - PHP (CakePHP)
 - Node (Nest, TypeORM)
 
-**Other**:
+**🔗 Other**:
 - MySQL
 - Microsoft SQL (MSSQL)
 - Firebase & Firestore
 - GraphQL
-
-<p align="center">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MatijaNovosel&layout=compact&langs_count=10&exclude_repo=heroesofcrimson&theme=dark" />
-</p>

@@ -12,7 +12,7 @@
 **🎨 Frontend**:
 - ![](https://img.shields.io/badge/SASS&SCSS-informational?style=flat-square&logo=sass&logoColor=white&color=CC6699)
 - ![](https://img.shields.io/badge/Angular-informational?style=flat-square&logo=angular&logoColor=white&color=DD0031)
-- ![](https://img.shields.io/badge/VueJS-3&2-informational?style=flat-square&logo=vue.js&logoColor=white&color=2bbc8a)
+- ![](https://img.shields.io/badge/VueJS-3%20&%202-informational?style=flat-square&logo=vue.js&logoColor=white&color=2bbc8a)
   - ![](https://img.shields.io/badge/Vuetify-informational?style=flat-square&logo=vuetify&logoColor=white&color=1867c0)
   - ![](https://img.shields.io/badge/Quasar-informational?style=flat-square&logo=quasar&logoColor=white&color=1976d2)
   - ![](https://img.shields.io/badge/Buefy-informational?style=flat-square&logo=buefy&logoColor=white&color=7957D5)
@@ -20,7 +20,7 @@
 
 **🔧 Backend**:
 - ![](https://img.shields.io/badge/Spring-informational?style=flat-square&logo=spring&logoColor=white&color=6DB33F)
-- ![](https://img.shields.io/badge/.NETCore-informational?style=flat-square&logo=dot-net&logoColor=white&color=5C2D91)
+- ![](https://img.shields.io/badge/.NET%20Core-informational?style=flat-square&logo=dotnet&logoColor=white&color=5C2D91)
 - ![](https://img.shields.io/badge/PHP-informational?style=flat-square&logo=php&logoColor=white&color=777BB4)
   - ![](https://img.shields.io/badge/CakePHP-informational?style=flat-square&logo=cakephp&logoColor=white&color=D33C43)
 - ![](https://img.shields.io/badge/NodeJS-informational?style=flat-square&logo=nodedotjs&logoColor=white&color=339933)

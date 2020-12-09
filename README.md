@@ -13,7 +13,6 @@
 - <img width="12" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/1024px-Electron_Software_Framework_Logo.svg.png" /> Electron
 
 **🔧 Backend**:
-- <img width="12" src="https://e7.pngegg.com/pngimages/6/979/png-clipart-spring-framework-computer-icons-spring-web-flow-java-advancement-leaf-logo.png" /> Spring
 - <img width="12" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/1200px-.NET_Core_Logo.svg.png" /> ASP .NET Core 3.1+
 - <img width="12" src="https://cdn.iconscout.com/icon/free/png-256/cakephp-1-1175048.png" /> PHP (CakePHP)
 - <img width="12" src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png" /> Node

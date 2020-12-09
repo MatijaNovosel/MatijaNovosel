@@ -21,10 +21,10 @@
 
 **🔧 Backend**:
 - ![](https://img.shields.io/badge/%20Spring-informational?style=plastic&logo=spring&logoColor=white&color=6DB33F)
-- ![](https://img.shields.io/badge/%20.NET%20Core-informational?style=plastic&logo=dotnet&logoColor=white&color=5C2D91)
+- ![](https://img.shields.io/badge/%20.NET%20Core-informational?style=plastic&logo=.net&logoColor=white&color=5C2D91)
 - ![](https://img.shields.io/badge/%20PHP-informational?style=plastic&logo=php&logoColor=white&color=777BB4)
   - ![](https://img.shields.io/badge/%20CakePHP-informational?style=plastic&logo=cakephp&logoColor=white&color=D33C43)
-- ![](https://img.shields.io/badge/%20NodeJS-informational?style=plastic&logo=nodedotjs&logoColor=white&color=339933)
+- ![](https://img.shields.io/badge/%20NodeJS-informational?style=plastic&logo=node.js&logoColor=white&color=339933)
   - ![](https://img.shields.io/badge/%20Typescript-informational?style=plastic&logo=typescript&logoColor=white&color=007ACC)
   - ![](https://img.shields.io/badge/%20NestJS%20&%20TypeORM-informational?style=plastic&logo=nestjs&logoColor=E0234E&color=black)
 

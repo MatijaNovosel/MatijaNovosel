@@ -1,27 +1,33 @@
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MatijaNovosel&layout=compact&langs_count=10&exclude_repo=heroesofcrimson" />
-</p>
+## &#x1f4c8; GitHub Stats
 
-## Technologies that I work with:
+<a href="https://github.com/MartinHeinz/MartinHeinz">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MatijaNovosel&layout=compact&langs_count=10&exclude_repo=heroesofcrimson" />
+</a>
+<a href="https://github.com/MartinHeinz/MartinHeinz">
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=MatijaNovosel&show_icons=true&line_height=28&custom_title=Stats" />
+</a>
+
+## 💻 Technologies that I use:
 
 **🎨 Frontend**:
-- <img width="12" src="https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg" /> SASS & SCSS
-- <img width="12" src="https://cdn.worldvectorlogo.com/logos/angular-icon.svg" /> Angular
-- <img width="12" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png" /> Vue 
-  - <img width="12" src="https://seeklogo.com/images/V/vuetify-logo-3BCF73C928-seeklogo.com.png" /> <img width="12" src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg" /> <img width="12" src="https://www.primefaces.org/wp-content/uploads/2019/12/primevue-logo.png" /> <img width="12" src="https://img.stackshare.io/service/10410/thumb_retina_26799900.png" /> Vuetify, Quasar, PrimeVue, Buefy component libraries
-  - Vue 3 (Composition API) and 2
-- <img width="12" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/1024px-Electron_Software_Framework_Logo.svg.png" /> Electron
+- ![](https://img.shields.io/badge/SASS&SCSS-informational?style=flat-square&logo=sass&logoColor=white&color=CC6699)
+- ![](https://img.shields.io/badge/Angular-informational?style=flat-square&logo=angular&logoColor=white&color=DD0031)
+- ![](https://img.shields.io/badge/VueJS-3&2-informational?style=flat-square&logo=vue.js&logoColor=white&color=2bbc8a)
+  - ![](https://img.shields.io/badge/Vuetify-informational?style=flat-square&logo=vuetify&logoColor=white&color=1867c0)
+  - ![](https://img.shields.io/badge/Quasar-informational?style=flat-square&logo=quasar&logoColor=white&color=1976d2)
+  - ![](https://img.shields.io/badge/Buefy-informational?style=flat-square&logo=buefy&logoColor=white&color=7957D5)
+- ![](https://img.shields.io/badge/Electron-informational?style=flat-square&logo=electron&logoColor=white&color=47848F)
 
 **🔧 Backend**:
-- <img width="12" src="https://spring-petclinic.github.io/images/logo-spring.png" /> Spring
-- <img width="12" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/1200px-.NET_Core_Logo.svg.png" /> ASP .NET Core 3.1+
-- <img width="12" src="https://cdn.iconscout.com/icon/free/png-256/cakephp-1-1175048.png" /> PHP (CakePHP)
-- <img width="12" src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png" /> Node
-  - <img width="12" src="https://seeklogo.com/images/N/nestjs-logo-09342F76C0-seeklogo.com.png" /> Nest
-  - TypeORM
+- ![](https://img.shields.io/badge/Spring-informational?style=flat-square&logo=spring&logoColor=white&color=6DB33F)
+- ![](https://img.shields.io/badge/.NETCore-informational?style=flat-square&logo=dot-net&logoColor=white&color=5C2D91)
+- ![](https://img.shields.io/badge/PHP-informational?style=flat-square&logo=php&logoColor=white&color=777BB4)
+  - ![](https://img.shields.io/badge/CakePHP-informational?style=flat-square&logo=cakephp&logoColor=white&color=D33C43)
+- ![](https://img.shields.io/badge/NodeJS-informational?style=flat-square&logo=nodedotjs&logoColor=white&color=339933)
+  - ![](https://img.shields.io/badge/NestJS&TypeORM-informational?style=flat-square&logo=nestjs&logoColor=white&color=E0234E)
 
 **🔗 Other**:
-- <img width="12" src="https://cdn.worldvectorlogo.com/logos/mysql-6.svg" /> MySQL
-- <img width="12" src="https://img.icons8.com/color/452/microsoft-sql-server.png" /> Microsoft SQL (MSSQL)
-- <img width="12" src="https://img.icons8.com/color/452/firebase.png" /> Firebase & Firestore
-- <img width="12" src="https://miro.medium.com/max/400/1*nP2C50GK4_-ly_R_mq3juQ.png" /> GraphQL
+- ![](https://img.shields.io/badge/MySQL-informational?style=flat-square&logo=mysql&logoColor=white&color=4479A1)
+- ![](https://img.shields.io/badge/TSQL-informational?style=flat-square&logo=microsoft-sql-server&logoColor=white&color=CC2927)
+- ![](https://img.shields.io/badge/Firebase&Firestore-informational?style=flat-square&logo=firebase&logoColor=white&color=FFCA28)
+- ![](https://img.shields.io/badge/GraphQL-informational?style=flat-square&logo=graphql&logoColor=white&color=E10098)

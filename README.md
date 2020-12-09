@@ -1,7 +1,3 @@
-<p align="center">
-  Welcome to my profile
-</p>
-
 ## Most used languages
 
 <p align="center">

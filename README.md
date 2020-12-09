@@ -24,10 +24,10 @@
 - ![](https://img.shields.io/badge/PHP-informational?style=flat-square&logo=php&logoColor=white&color=777BB4)
   - ![](https://img.shields.io/badge/CakePHP-informational?style=flat-square&logo=cakephp&logoColor=white&color=D33C43)
 - ![](https://img.shields.io/badge/NodeJS-informational?style=flat-square&logo=nodedotjs&logoColor=white&color=339933)
-  - ![](https://img.shields.io/badge/NestJS&TypeORM-informational?style=flat-square&logo=nestjs&logoColor=white&color=E0234E)
+  - ![](https://img.shields.io/badge/NestJS&TypeORM-informational?style=flat-square&logo=nestjs&logoColor=E0234E&color=black)
 
 **🔗 Other**:
 - ![](https://img.shields.io/badge/MySQL-informational?style=flat-square&logo=mysql&logoColor=white&color=4479A1)
 - ![](https://img.shields.io/badge/TSQL-informational?style=flat-square&logo=microsoft-sql-server&logoColor=white&color=CC2927)
-- ![](https://img.shields.io/badge/Firebase&Firestore-informational?style=flat-square&logo=firebase&logoColor=white&color=FFCA28)
-- ![](https://img.shields.io/badge/GraphQL-informational?style=flat-square&logo=graphql&logoColor=white&color=E10098)
+- ![](https://img.shields.io/badge/Firebase&Firestore-informational?style=flat-square&logo=firebase&logoColor=ffa611&color=FFCA28)
+- ![](https://img.shields.io/badge/GraphQL-informational?style=flat-square&logo=graphql&logoColor=fd43c0&color=E10098)

@@ -11,7 +11,7 @@
 
 **🎨 Frontend**:
 - ![](https://img.shields.io/badge/%20Typescript%20💕-informational?style=flat&logo=typescript&logoColor=white&color=007ACC)
-- ![](https://img.shields.io/badge/%20SASS&SCSS-informational?style=flat&logo=sass&logoColor=white&color=CC6699)
+- ![](https://img.shields.io/badge/%20SASS%20&%20SCSS-informational?style=flat&logo=sass&logoColor=white&color=CC6699)
 - ![](https://img.shields.io/badge/%20Angular-informational?style=flat&logo=angular&logoColor=white&color=DD0031)
 - ![](https://img.shields.io/badge/%20VueJS-3%20&%202-informational?style=flat&logo=vue.js&logoColor=white&color=2bbc8a)
   - ![](https://img.shields.io/badge/%20Vuetify-informational?style=flat&logo=vuetify&logoColor=white&color=1867c0)
@@ -31,6 +31,6 @@
 **🔗 Other**:
 - ![](https://img.shields.io/badge/%20MySQL-informational?style=flat&logo=mysql&logoColor=white&color=4479A1)
 - ![](https://img.shields.io/badge/%20TSQL-informational?style=flat&logo=microsoft-sql-server&logoColor=white&color=CC2927)
-- ![](https://img.shields.io/badge/%20Firebase&Firestore-informational?style=flat&logo=firebase&logoColor=f6820d&color=FFCA28)
+- ![](https://img.shields.io/badge/%20Firebase%20&%20Firestore-informational?style=flat&logo=firebase&logoColor=f6820d&color=FFCA28)
 - ![](https://img.shields.io/badge/%20GraphQL-informational?style=flat&logo=graphql&logoColor=fd43c0&color=E10098)
 - ![](https://img.shields.io/badge/%20JSON%20Web%20Tokens-informational?style=flat&logo=json-web-tokens&logoColor=E10098&color=000000)

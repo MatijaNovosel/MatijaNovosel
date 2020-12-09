@@ -10,7 +10,7 @@
 ## 💻 Technologies that I use:
 
 **🎨 Frontend**:
-- ![](https://img.shields.io/badge/Typescript-informational?style=flat&logo=typescript&logoColor=white&color=007ACC)
+- ![](https://img.shields.io/badge/Typescript%20💕-informational?style=flat&logo=typescript&logoColor=white&color=007ACC)
 - ![](https://img.shields.io/badge/SASS&SCSS-informational?style=flat&logo=sass&logoColor=white&color=CC6699)
 - ![](https://img.shields.io/badge/Angular-informational?style=flat&logo=angular&logoColor=white&color=DD0031)
 - ![](https://img.shields.io/badge/VueJS-3%20&%202-informational?style=flat&logo=vue.js&logoColor=white&color=2bbc8a)

@@ -1,10 +1,10 @@
 ## &#x1f4c8; GitHub Stats
 
 <a href="https://github.com/MartinHeinz/MartinHeinz">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MatijaNovosel&layout=compact&langs_count=10&exclude_repo=heroesofcrimson" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MatijaNovosel&layout=compact&langs_count=10&exclude_repo=heroesofcrimson&hide_title=true" />
 </a>
 <a href="https://github.com/MartinHeinz/MartinHeinz">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=MatijaNovosel&show_icons=true&line_height=28&custom_title=Stats" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=MatijaNovosel&show_icons=true&line_height=28&hide_title=true" />
 </a>
 
 ## 💻 Technologies that I use:

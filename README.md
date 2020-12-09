@@ -10,13 +10,13 @@
 ## 💻 Technologies that I use:
 
 **🎨 Frontend**:
-- ![](https://img.shields.io/badge/SASS&SCSS-informational?style=for-the-badge&logo=sass&logoColor=white&color=CC6699)
-- ![](https://img.shields.io/badge/Angular-informational?style=for-the-badge&logo=angular&logoColor=white&color=DD0031)
-- ![](https://img.shields.io/badge/VueJS-3%20&%202-informational?style=for-the-badge&logo=vue.js&logoColor=white&color=2bbc8a)
-  - ![](https://img.shields.io/badge/Vuetify-informational?style=for-the-badge&logo=vuetify&logoColor=white&color=1867c0)
-  - ![](https://img.shields.io/badge/Quasar-informational?style=for-the-badge&logo=quasar&logoColor=white&color=1976d2)
-  - ![](https://img.shields.io/badge/Buefy-informational?style=for-the-badge&logo=buefy&logoColor=white&color=7957D5)
-- ![](https://img.shields.io/badge/Electron-informational?style=for-the-badge&logo=electron&logoColor=white&color=47848F)
+- ![](https://img.shields.io/badge/SASS&SCSS-informational?style=flat&logo=sass&logoColor=white&color=CC6699)
+- ![](https://img.shields.io/badge/Angular-informational?style=flat&logo=angular&logoColor=white&color=DD0031)
+- ![](https://img.shields.io/badge/VueJS-3%20&%202-informational?style=flat&logo=vue.js&logoColor=white&color=2bbc8a)
+  - ![](https://img.shields.io/badge/Vuetify-informational?style=flat&logo=vuetify&logoColor=white&color=1867c0)
+  - ![](https://img.shields.io/badge/Quasar-informational?style=flate&logo=quasar&logoColor=white&color=1976d2)
+  - ![](https://img.shields.io/badge/Buefy-informational?style=flat&logo=buefy&logoColor=white&color=7957D5)
+- ![](https://img.shields.io/badge/Electron-informational?style=flat&logo=electron&logoColor=white&color=47848F)
 
 **🔧 Backend**:
 - ![](https://img.shields.io/badge/Spring-informational?style=flat-square&logo=spring&logoColor=white&color=6DB33F)

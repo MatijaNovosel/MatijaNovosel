@@ -19,15 +19,15 @@
 - ![](https://img.shields.io/badge/Electron-informational?style=flat&logo=electron&logoColor=white&color=47848F)
 
 **🔧 Backend**:
-- ![](https://img.shields.io/badge/Spring-informational?style=flat-square&logo=spring&logoColor=white&color=6DB33F)
-- ![](https://img.shields.io/badge/.NET%20Core-informational?style=flat-square&logo=dotnet&logoColor=white&color=5C2D91)
-- ![](https://img.shields.io/badge/PHP-informational?style=flat-square&logo=php&logoColor=white&color=777BB4)
-  - ![](https://img.shields.io/badge/CakePHP-informational?style=flat-square&logo=cakephp&logoColor=white&color=D33C43)
-- ![](https://img.shields.io/badge/NodeJS-informational?style=flat-square&logo=nodedotjs&logoColor=white&color=339933)
-  - ![](https://img.shields.io/badge/NestJS&TypeORM-informational?style=flat-square&logo=nestjs&logoColor=E0234E&color=black)
+- ![](https://img.shields.io/badge/Spring-informational?style=flat&logo=spring&logoColor=white&color=6DB33F)
+- ![](https://img.shields.io/badge/.NET%20Core-informational?style=flat&logo=dotnet&logoColor=white&color=5C2D91)
+- ![](https://img.shields.io/badge/PHP-informational?style=flat&logo=php&logoColor=white&color=777BB4)
+  - ![](https://img.shields.io/badge/CakePHP-informational?style=flat&logo=cakephp&logoColor=white&color=D33C43)
+- ![](https://img.shields.io/badge/NodeJS-informational?style=flat&logo=nodedotjs&logoColor=white&color=339933)
+  - ![](https://img.shields.io/badge/NestJS&TypeORM-informational?style=flat&logo=nestjs&logoColor=E0234E&color=black)
 
 **🔗 Other**:
-- ![](https://img.shields.io/badge/MySQL-informational?style=flat-square&logo=mysql&logoColor=white&color=4479A1)
-- ![](https://img.shields.io/badge/TSQL-informational?style=flat-square&logo=microsoft-sql-server&logoColor=white&color=CC2927)
-- ![](https://img.shields.io/badge/Firebase&Firestore-informational?style=flat-square&logo=firebase&logoColor=ffa611&color=FFCA28)
-- ![](https://img.shields.io/badge/GraphQL-informational?style=flat-square&logo=graphql&logoColor=fd43c0&color=E10098)
+- ![](https://img.shields.io/badge/MySQL-informational?style=flat&logo=mysql&logoColor=white&color=4479A1)
+- ![](https://img.shields.io/badge/TSQL-informational?style=flat&logo=microsoft-sql-server&logoColor=white&color=CC2927)
+- ![](https://img.shields.io/badge/Firebase&Firestore-informational?style=flat&logo=firebase&logoColor=ffa611&color=FFCA28)
+- ![](https://img.shields.io/badge/GraphQL-informational?style=flat&logo=graphql&logoColor=fd43c0&color=E10098)

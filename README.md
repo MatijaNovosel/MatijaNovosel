@@ -1,3 +1,10 @@
+## Most used languages
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MatijaNovosel&layout=compact&langs_count=10&exclude_repo=heroesofcrimson&theme=dark&hide_title=true" />
+</p>
+
+
 ## Technologies that I work with:
 
 **🎨 Frontend**:
@@ -20,9 +27,3 @@
 - Microsoft SQL (MSSQL)
 - Firebase & Firestore
 - GraphQL
-
-## Most used languages
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MatijaNovosel&layout=compact&langs_count=10&exclude_repo=heroesofcrimson&theme=dark&hide_title=true" />
-</p>

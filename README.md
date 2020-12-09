@@ -1,7 +1,5 @@
-## Most used languages
-
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MatijaNovosel&layout=compact&langs_count=10&exclude_repo=heroesofcrimson&theme=dark&hide_title=true" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MatijaNovosel&layout=compact&langs_count=10&exclude_repo=heroesofcrimson&theme=dark" />
 </p>
 
 

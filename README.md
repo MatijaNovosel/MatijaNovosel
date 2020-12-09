@@ -4,11 +4,6 @@
 
 ## Technologies that I work with:
 
-<p align="center">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MatijaNovosel&layout=compact&langs_count=10&exclude_repo=heroesofcrimson&theme=dark" />
-</p>
-
-
 **Frontend**:
 - SASS & SCSS
 - Angular
@@ -29,3 +24,7 @@
 - Microsoft SQL (MSSQL)
 - Firebase & Firestore
 - GraphQL
+
+<p align="center">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MatijaNovosel&layout=compact&langs_count=10&exclude_repo=heroesofcrimson&theme=dark" />
+</p>

@@ -10,11 +10,10 @@
 - <img width="12" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png" /> Vue 
   - <img width="12" src="https://seeklogo.com/images/V/vuetify-logo-3BCF73C928-seeklogo.com.png" /> <img width="12" src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg" /> <img width="12" src="https://www.primefaces.org/wp-content/uploads/2019/12/primevue-logo.png" /> <img width="12" src="https://img.stackshare.io/service/10410/thumb_retina_26799900.png" /> Vuetify, Quasar, PrimeVue, Buefy component libraries
   - Vue 3 (Composition API) and 2
-- <img width="12" src="https://p1.hiclipart.com/preview/306/12/1001/ajax-logo-jquery-javascript-javascript-library-github-foundation-angularjs-yii-png-clipart.jpg" /> jQuery
 - <img width="12" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/1024px-Electron_Software_Framework_Logo.svg.png" /> Electron
 
 **🔧 Backend**:
-- <img width="12" src="https://img1.pnghut.com/10/8/21/YbTPZCc2dK/web-application-testng-spring-java-properties.jpg" /> Spring
+- <img width="12" src="https://e7.pngegg.com/pngimages/6/979/png-clipart-spring-framework-computer-icons-spring-web-flow-java-advancement-leaf-logo.png" /> Spring
 - <img width="12" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/1200px-.NET_Core_Logo.svg.png" /> ASP .NET Core 3.1+
 - <img width="12" src="https://cdn.iconscout.com/icon/free/png-256/cakephp-1-1175048.png" /> PHP (CakePHP)
 - <img width="12" src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png" /> Node

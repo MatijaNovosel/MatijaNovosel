@@ -29,5 +29,5 @@
 **🔗 Other**:
 - ![](https://img.shields.io/badge/MySQL-informational?style=flat&logo=mysql&logoColor=white&color=4479A1)
 - ![](https://img.shields.io/badge/TSQL-informational?style=flat&logo=microsoft-sql-server&logoColor=white&color=CC2927)
-- ![](https://img.shields.io/badge/Firebase&Firestore-informational?style=flat&logo=firebase&logoColor=ffa611&color=FFCA28)
+- ![](https://img.shields.io/badge/Firebase&Firestore-informational?style=flat&logo=firebase&logoColor=f6820d&color=FFCA28)
 - ![](https://img.shields.io/badge/GraphQL-informational?style=flat&logo=graphql&logoColor=fd43c0&color=E10098)

@@ -26,7 +26,7 @@
   - ![](https://img.shields.io/badge/%20CakePHP-informational?style=flat&logo=cakephp&logoColor=white&color=D33C43)
 - ![](https://img.shields.io/badge/%20NodeJS-informational?style=flat&logo=nodedotjs&logoColor=white&color=339933)
   - ![](https://img.shields.io/badge/%20Typescript-informational?style=flat&logo=typescript&logoColor=white&color=007ACC)
-  - ![](https://img.shields.io/badge/%20NestJS&TypeORM-informational?style=flat&logo=nestjs&logoColor=E0234E&color=black)
+  - ![](https://img.shields.io/badge/%20NestJS%20&%20TypeORM-informational?style=flat&logo=nestjs&logoColor=E0234E&color=black)
 
 **🔗 Other**:
 - ![](https://img.shields.io/badge/%20MySQL-informational?style=flat&logo=mysql&logoColor=white&color=4479A1)

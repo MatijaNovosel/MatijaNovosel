@@ -34,3 +34,4 @@
 - ![](https://img.shields.io/badge/%20Firebase%20&%20Firestore-informational?style=plastic&logo=firebase&logoColor=f6820d&color=FFCA28)
 - ![](https://img.shields.io/badge/%20GraphQL-informational?style=plastic&logo=graphql&logoColor=fd43c0&color=E10098)
 - ![](https://img.shields.io/badge/%20JSON%20Web%20Tokens-informational?style=plastic&logo=json-web-tokens&logoColor=E10098&color=000000)
+- ![](https://img.shields.io/badge/Flutter-informational?style=plastic&logo=flutter&logoColor=ffffff&color=02569B)

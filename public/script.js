@@ -40,7 +40,7 @@ document.getElementById("navbar-menu").addEventListener("click", () => {
 // Project cards
 
 function redirect(link) {
-  window.location.replace(link);
+  window.location.href = link;
 }
 
 [...document.querySelectorAll('[data-link]')].forEach(linkItem => {

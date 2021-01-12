@@ -87,6 +87,8 @@ body {
 .navbar-container {
   display: flex;
   justify-content: space-between;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .main-container {
@@ -108,13 +110,13 @@ body {
 
 .navbar-links-collapsible span:nth-child(2n) {
   cursor: pointer;
-  padding: 1em;
+  padding: 0.3em 0;
   background-color: #1c1b1b;
 }
 
 .navbar-links-collapsible span {
   cursor: pointer;
-  padding: 1em;
+  padding: 0.3em 0;
   background-color: #151414;
 }
 
@@ -215,7 +217,7 @@ body {
 }
 
 .project-card-actions img {
-  padding: 0.5em;
+  padding: 0.5em 0.5em 0.5em 0;
 }
 
 .grow {
@@ -396,7 +398,7 @@ body {
 }
 
 .showing {
-  display: block;
+  display: block !important;
 }
 
 .main-timeline .description {
@@ -441,19 +443,21 @@ body {
 
 #fab {
   display: none;
+  border-radius: 50%;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 100;
 }
 
 @media only screen and (max-width: 767px) {
-  #navbar-menu {
-    display: inline;
+  .navbar-container {
+    padding-left: 0.8em !important;
+    padding-right: 0.8em !important;
   }
 
-  #fab {
-    position: fixed;
-    right: 15px;
-    bottom: 15px;
-    display: block;
-    z-index: 100;
+  #navbar-menu {
+    display: inline;
   }
 
   #navbar-menu-collapsible-content {

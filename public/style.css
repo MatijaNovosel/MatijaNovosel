@@ -317,6 +317,11 @@ body {
   justify-content: center;
 }
 
+.about-me-portrait {
+  display: flex;
+  align-items: center;
+}
+
 .about-me-portrait img {
   max-height: 100%;
   height: 180px;
@@ -508,10 +513,6 @@ body {
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
       rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  }
-
-  .about-me-portrait {
-    text-align: center;
   }
 
   .about-me-portrait img {

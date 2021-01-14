@@ -363,11 +363,11 @@ body {
 }
 
 .main-timeline .timeline-icon {
-  width: 18px;
-  height: 18px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   background: var(--dark-3);
-  border: 2px solid #d6d5d5;
+  border: 3px solid var(--tiger-orange);
   box-sizing: content-box;
   margin: auto;
   position: absolute;
@@ -538,7 +538,7 @@ body {
   }
 
   .main-timeline:before {
-    left: 10px;
+    left: 15px;
   }
 
   .main-timeline .timeline {

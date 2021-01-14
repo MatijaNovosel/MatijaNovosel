@@ -320,6 +320,7 @@ body {
 .about-me-portrait {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .about-me-portrait img {

@@ -559,7 +559,9 @@ body {
     margin: 0;
     position: absolute;
     top: 18px;
-    left: 0;
+    left: 2px;
+    width: 24px;
+    height: 24px;
   }
 
   .main-timeline .timeline-content {

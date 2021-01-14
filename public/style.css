@@ -11,16 +11,7 @@
 
 body:after,
 body:before {
-  clip-path: polygon(
-    0 0,
-    80% 0%,
-    100% 0,
-    100% 53%,
-    0 80%,
-    0 83%,
-    0 80%,
-    0% 20%
-  );
+  -webkit-mask-box-image: url(mask.svg);
 }
 
 body:after,

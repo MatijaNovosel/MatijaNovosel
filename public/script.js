@@ -83,7 +83,8 @@ const translations = {
     finappFlutterDescription: "Mobilna aplikacija za praćenje financija izrađena pomoću Fluttera.",
     downloaderDescription: "Program za preuzimanje pjesama koristeći .NET Core i LAST.FM API sa sučeljem temeljenim na Vue i Electronom.",
     onexprojektiDescription: "Stranica za tvrtku Onexprojekti izrađena s VueJS i PHPom.",
-    heroesOfCrimsonDescription: "Bullet hell RPG rougelike napravljen u Game Maker Studiju 2."
+    heroesOfCrimsonDescription: "Bullet hell RPG rougelike napravljen u Game Maker Studiju 2.",
+    omegaExperienceTwo: "Mentoriranje i stvaranje obrazovnog Javascript sadržaja za nove i buduće zaposlenike."
   },
   en: {
     aboutMe: "About me",
@@ -114,7 +115,8 @@ const translations = {
     finappFlutterDescription: "Finapp (https://github.com/MatijaNovosel/fin-app) mobile implementation made with Flutter.",
     downloaderDescription: "Song downloader made with .NET Core and LAST FM using Electron and Vue for the frontend.",
     onexprojektiDescription: "Company website made with VueJS and PHP.",
-    heroesOfCrimsonDescription: "Bullet hell RPG roguelike created using Game Maker Studio 2."
+    heroesOfCrimsonDescription: "Bullet hell RPG roguelike created using Game Maker Studio 2.",
+    omegaExperienceTwo: "Mentoring and creating educational Javascript content for new and future employees."
   }
 };
 

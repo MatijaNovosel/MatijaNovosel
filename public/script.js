@@ -66,7 +66,7 @@ const translations = {
     aboutPartThree: "U to vrijeme, međutim, sam se počeo zanimati za teme poput programiranja i razvoja igara te zatim krenuo s pohađanjem Tehničkog veleučilišta u Zagrebu, tamo sam znantno poboljšao svoje sposobnosti i u međuvremenu našao dva posla kao junior programer. Nakon 3 godine dobio sam titulu Stručnog prvostupnika informacijskih tehnologija (bacc. ing. techn. inf.).",
     aboutPartFour: "Trenutno dovršavam svoje visoko obrazovanje u polju Informatičkih znanosti s ciljem dobivanja titule Stručni specijalist inženjer informacijskih tehnologija. (struc. spec. ing. techn. inf.).",
     juniorSoftwareDeveloper: "Junior razvojni inžinjer",
-    present: "Trenutačno vrijeme",
+    present: "Sada",
     june: "Srpanj",
     omegaExperience: "Razvoj aplikacija za razne tvrtke Grada Zagreba, uključujući Čistoću, Hrvatske autoceste i Gradsku plinaru koristeći pritom fullstack tehnologije.",
     may: "Svibanj",

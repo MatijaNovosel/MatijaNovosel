@@ -18,6 +18,7 @@
   - ![](https://img.shields.io/badge/%20Quasar-informational?style=plastic&logo=quasar&logoColor=white&color=1976d2)
   - ![](https://img.shields.io/badge/%20Buefy-informational?style=plastic&logo=buefy&logoColor=white&color=7957D5)
 - ![](https://img.shields.io/badge/%20Electron-informational?style=plastic&logo=electron&logoColor=white&color=47848F)
+- ![](https://img.shields.io/badge/%20React-informational?style=plastic&logo=react&logoColor=white&color=61DAFB)
 
 **🔧 Backend**:
 - ![](https://img.shields.io/badge/%20Spring-informational?style=plastic&logo=spring&logoColor=white&color=6DB33F)

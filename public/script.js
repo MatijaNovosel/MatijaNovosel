@@ -63,7 +63,7 @@ const translations = {
     contact: "Kontakt",
     aboutPartOne: "Programer sam s jako velikom znatiželjom za stvaranjem web aplikacija i težim što bolje unaprijediti svoje znanje i sebe kao osobu.",
     aboutPartTwo: "Rođen sam u Hrvatskoj i odrastao na selu s budućim namjerama da pronađem karijeru u znanstvenim poljima vezanim uz računala i elektrotehniku, početak toga našao sam u Tehničkoj školi Ruđera Boškovića, Zagreb gdje sam proveo 4 godine i krajem svojeg srednjoškolskog obrazovanja dobio titulu Tehničara za računarstvo.",
-    aboutPartThree: "U to vrijeme, međutim, sam se počeo zanimati za teme poput programiranja i razvoja igara te zatim krenuo s pohađanjem Tehničkog veleučilišta u Zagrebu, tamo sam znantno poboljšao svoje sposobnosti i u međuvremenu našao dva posla kao junior programer. Nakon 3 godine dobio sam titulu Stručnog prvostupnika informacijskih tehnologija (bacc. ing. techn. inf.).",
+    aboutPartThree: "U to vrijeme, međutim, sam se počeo zanimati za teme poput programiranja i razvoja igara te zatim krenuo s pohađanjem Tehničkog veleučilišta u Zagrebu, tamo sam znatno poboljšao svoje sposobnosti i u međuvremenu našao dva posla kao junior programer. Nakon 3 godine dobio sam titulu Stručnog prvostupnika informacijskih tehnologija (bacc. ing. techn. inf.).",
     aboutPartFour: "Trenutno dovršavam svoje visoko obrazovanje u polju Informatičkih znanosti s ciljem dobivanja titule Stručni specijalist inženjer informacijskih tehnologija. (struc. spec. ing. techn. inf.).",
     juniorSoftwareDeveloper: "Junior razvojni inžinjer",
     present: "Sada",

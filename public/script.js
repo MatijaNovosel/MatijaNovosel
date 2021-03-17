@@ -112,7 +112,7 @@ const translations = {
     other: "Other",
     lmsDescription: "Learning management system made with VueJS 2 on the frontend and .NET Core on the backend with MSSQL as the database.",
     finappDescription: "App for managing finances made using Vue 3 Composition API on the frontend and NestJS and GraphQL on the backend with MySQL as the database.",
-    finappFlutterDescription: "Finapp (https://github.com/MatijaNovosel/fin-app) mobile implementation made with Flutter.",
+    finappFlutterDescription: "Finapp mobile implementation made with Flutter.",
     downloaderDescription: "Song downloader made with .NET Core and LAST FM using Electron and Vue for the frontend.",
     onexprojektiDescription: "Company website made with VueJS and PHP.",
     heroesOfCrimsonDescription: "Bullet hell RPG roguelike created using Game Maker Studio 2.",

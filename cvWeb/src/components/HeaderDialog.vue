@@ -9,20 +9,13 @@
       <v-card-title>
         <span
           :style="{
-            fontSize:
-              $vuetify.breakpoint.xs || $vuetify.breakpoint.sm ? '15px' : '20px'
+            fontSize: $vuetify.breakpoint.smAndDown ? '15px' : '20px'
           }"
         >
           {{ title }}
         </span>
         <v-spacer />
-        <v-btn
-          v-if="haveCloseButton"
-          @click="close"
-          small
-          icon
-          class="mr-3"
-        >
+        <v-btn v-if="haveCloseButton" @click="close" small icon class="mr-3">
           <v-icon>mdi-close</v-icon>
         </v-btn>
       </v-card-title>

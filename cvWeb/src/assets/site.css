@@ -18,3 +18,11 @@
 html {
   scroll-behavior: smooth;
 }
+
+.gradient-text {
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  text-shadow: none;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

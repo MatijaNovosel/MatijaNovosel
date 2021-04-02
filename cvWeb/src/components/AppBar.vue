@@ -1,6 +1,6 @@
 <template>
   <v-app-bar app class="elevation-1" clipped-left>
-    <v-app-bar-nav-icon @click="$emit('toggle-drawer')" />
+    <v-app-bar-nav-icon @click="$emit('toggle-drawer')" v-if="$vuetify.breakpoint.smAndDown" />
     <v-list-item>
       <v-list-item-content>
         <v-list-item-title>

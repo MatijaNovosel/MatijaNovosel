@@ -93,7 +93,7 @@
       <h2>Education</h2>
     </v-col>
     <v-col cols="12">
-      <v-list rounded="lg">
+      <v-list rounded>
         <v-list-item v-for="(educationItem, i) in education" :key="i">
           <v-list-item-avatar tile>
             <v-img alt="" :src="educationItem.logo" v-if="educationItem.logo" />
@@ -128,8 +128,10 @@
           <v-chip
             :color="technology.color"
             label
-            class="mr-3"
-            v-for="(technology, i) in technologies"
+            class="ma-1"
+            v-for="(technology, i) in technologies.filter(
+              (x) => x.group == 'frontend'
+            )"
             :key="i"
           >
             <v-img
@@ -148,8 +150,10 @@
           <v-chip
             :color="technology.color"
             label
-            class="mr-3"
-            v-for="(technology, i) in technologies"
+            class="ma-1"
+            v-for="(technology, i) in technologies.filter(
+              (x) => x.group == 'backend'
+            )"
             :key="i"
           >
             <v-img
@@ -168,7 +172,7 @@
           <v-chip
             :color="technology.color"
             label
-            class="mr-3"
+            class="ma-1"
             v-for="(technology, i) in technologies"
             :key="i"
           >
@@ -188,11 +192,28 @@
     </v-col>
     <v-col cols="12">
       <v-row>
-        <v-col cols="4" :key="i" v-for="(project, i) in projects">
+        <v-col cols="12" md="4" :key="i" v-for="(project, i) in projects">
           <v-card>
-            <v-card-title>
+            <v-card-title class="orange--text">
               {{ project.title }}
             </v-card-title>
+            <v-card-subtitle>
+              {{ project.description }}
+            </v-card-subtitle>
+            <v-divider />
+            <v-card-actions class="justify-end">
+              <v-btn
+                @click="openInNew(link.url)"
+                icon
+                v-for="(link, j) in project.links"
+                :key="j"
+              >
+                <v-icon v-text="link.icon" />
+              </v-btn>
+              <v-btn icon>
+                <v-icon>mdi-eye</v-icon>
+              </v-btn>
+            </v-card-actions>
           </v-card>
         </v-col>
       </v-row>
@@ -202,16 +223,22 @@
     </v-col>
     <v-col cols="12">
       <v-list>
-        <v-list-item>
+        <v-list-item v-for="(contact, i) in contacts" :key="i">
           <v-list-item-avatar>
-            <v-icon>mdi-email</v-icon>
+            <v-icon v-text="contact.icon" />
           </v-list-item-avatar>
           <v-list-item-content>
-            <v-list-item-title>
-              Email
+            <v-list-item-title class="orange--text">
+              {{ contact.title }}
             </v-list-item-title>
             <v-list-item-subtitle>
-              mnovosel5@gmail.com
+              <a
+                class="text-decoration-none grey--text text--lighten-2"
+                :href="contact.subtitle"
+              >
+                {{ contact.subtitle }}
+                <v-icon small color="grey">mdi-open-in-new</v-icon>
+              </a>
             </v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
@@ -227,7 +254,10 @@ export default {
   name: "Home",
   methods: {
     format,
-    formatDistance
+    formatDistance,
+    openInNew(url) {
+      window.location.href = url;
+    }
   },
   data: () => ({
     workExperiences: [
@@ -280,52 +310,211 @@ export default {
       {
         text: "Typescript",
         logo: "typescript",
-        color: "#007acc"
+        color: "#007acc",
+        group: "frontend"
       },
       {
         text: "SASS&SCSS",
         logo: "sass",
-        color: "#cc6699"
+        color: "#cc6699",
+        group: "frontend"
       },
       {
         text: "Angular",
         logo: "angular",
-        color: "#dd0031"
+        color: "#dd0031",
+        group: "frontend"
       },
       {
         text: "Vue 3&2",
         logo: "vue-dot-js",
-        color: "#2bbc8a"
+        color: "#2bbc8a",
+        group: "frontend"
       },
       {
         text: "Vuetify",
         logo: "vuetify",
-        color: "#1867c0"
+        color: "#1867c0",
+        group: "frontend"
       },
       {
         text: "Quasar",
         logo: "quasar",
-        color: "#1976d2"
+        color: "#1976d2",
+        group: "frontend"
       },
       {
         text: "Buefy",
         logo: "buefy",
-        color: "#7957d5"
+        color: "#7957d5",
+        group: "frontend"
       },
       {
         text: "Electron",
         logo: "electron",
-        color: "#47848f"
+        color: "#47848f",
+        group: "frontend"
       },
       {
         text: "React",
         logo: "react",
-        color: "#61dafb"
+        color: "#61dafb",
+        group: "frontend"
+      },
+      {
+        text: "Spring",
+        logo: "spring",
+        color: "#6db33f",
+        group: "backend"
+      },
+      {
+        text: ".NET Core",
+        logo: "dot-net",
+        color: "#5c2d91",
+        group: "backend"
+      },
+      {
+        text: "PHP",
+        logo: "php",
+        color: "#777bb4",
+        group: "backend"
+      },
+      {
+        text: "Cake PHP",
+        logo: "cakephp",
+        color: "#d33c43",
+        group: "backend"
+      },
+      {
+        text: "NodeJS",
+        logo: "node-dot-js",
+        color: "#339933",
+        group: "backend"
+      },
+      {
+        text: "Typescript",
+        logo: "typescript",
+        color: "#007acc",
+        group: "backend"
+      },
+      {
+        text: "NestJS & TypeORM",
+        logo: "nestjs",
+        color: "black",
+        group: "backend"
+      },
+      {
+        text: "MySQL",
+        logo: "mysql",
+        color: "#4479A1",
+        group: "other"
+      },
+      {
+        text: "MySQL",
+        logo: "mysql",
+        color: "#4479A1",
+        group: "other"
       }
     ],
+    /*
+
+              <img
+                src="https://img.shields.io/badge/%20TSQL-informational?style=plastic&logo=microsoft-sql-server&logoColor=white&color=CC2927"
+              />
+              <img
+                src="https://img.shields.io/badge/%20Firebase%20&%20Firestore-informational?style=plastic&logo=firebase&logoColor=f6820d&color=FFCA28"
+              />
+              <img
+                src="https://img.shields.io/badge/%20GraphQL-informational?style=plastic&logo=graphql&logoColor=fd43c0&color=E10098"
+              />
+              <img
+                src="https://img.shields.io/badge/%20JSON%20Web%20Tokens-informational?style=plastic&logo=json-web-tokens&logoColor=E10098&color=000000"
+              />
+              <img
+                src="https://img.shields.io/badge/Flutter-informational?style=plastic&logo=flutter&logoColor=ffffff&color=02569B"
+              />
+
+    */
     projects: [
       {
-        title: "LMS"
+        title: "LMS",
+        description: "Learning management system.",
+        links: [
+          { url: "https://github.com/MatijaNovosel/lms", icon: "mdi-github" }
+        ],
+        images: []
+      },
+      {
+        title: "FinApp",
+        description: "App for managing finances.",
+        links: [
+          {
+            url: "https://github.com/MatijaNovosel/fin-app",
+            icon: "mdi-github"
+          }
+        ],
+        images: []
+      },
+      {
+        title: "FinApp mobile",
+        description: "FinApp mobile implementation.",
+        links: [
+          {
+            url: "https://github.com/MatijaNovosel/fin-app-mobile",
+            icon: "mdi-github"
+          }
+        ],
+        images: []
+      },
+      {
+        title: "Downloader",
+        description: "Electron song downloader.",
+        links: [
+          {
+            url: "https://github.com/MatijaNovosel/downloader",
+            icon: "mdi-github"
+          }
+        ],
+        images: []
+      },
+      {
+        title: "Onexprojekti",
+        description: "Construction company website.",
+        links: [
+          {
+            url: "https://onexprojekti.hr/",
+            icon: "mdi-link"
+          }
+        ],
+        images: []
+      },
+      {
+        title: "Heroes of crimson",
+        description: "Bullet hell RPG roguelike.",
+        links: [
+          {
+            url: "https://github.com/MatijaNovosel/heroes-of-crimson",
+            icon: "mdi-github"
+          }
+        ],
+        images: []
+      }
+    ],
+    contacts: [
+      {
+        title: "Email",
+        subtitle: "mnovosel5@gmail.com",
+        icon: "mdi-email"
+      },
+      {
+        title: "LinkedIn",
+        subtitle: "https://www.linkedin.com/in/matija-novosel-616403161/",
+        icon: "mdi-linkedin"
+      },
+      {
+        title: "GitHub",
+        subtitle: "https://github.com/MatijaNovosel",
+        icon: "mdi-github"
       }
     ]
   })

@@ -22,7 +22,7 @@
     <v-divider />
     <v-list nav dense>
       <v-list-item
-        @click="$vuetify.goTo(item.target, { easing: 'linear', duration: 100 })"
+        @click="scrollTo(item.target)"
         class="ml-2"
         v-for="(item, i) in items"
         :key="i"
@@ -47,15 +47,20 @@ export default {
     value: Boolean
   },
   mixins: [LocaleMixin],
+  watch: {
+    value(val) {
+      this.drawerOpen = val;
+    }
+  },
   methods: {
     inputChanged(val) {
       this.drawerOpen = val;
       this.$emit("input", val);
-    }
-  },
-  watch: {
-    value(val) {
-      this.drawerOpen = val;
+    },
+    scrollTo(target) {
+      const el = document.getElementById(target);
+      const y = el.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({ top: y + -65 });
     }
   },
   data: function() {
@@ -65,32 +70,32 @@ export default {
         {
           icon: "mdi-account",
           text: "About me",
-          target: "#aboutMe"
+          target: "aboutMe"
         },
         {
           icon: "mdi-briefcase",
           text: "Work experience",
-          target: "#workExperience"
+          target: "workExperience"
         },
         {
           icon: "mdi-school",
           text: "Education",
-          target: "#education"
+          target: "education"
         },
         {
           icon: "mdi-tools",
           text: "Technologies",
-          target: "#technologies"
+          target: "technologies"
         },
         {
           icon: "mdi-clipboard-check-multiple",
           text: "Projects",
-          target: "#projects"
+          target: "projects"
         },
         {
           icon: "mdi-phone",
           text: "Contact",
-          target: "#contact"
+          target: "contact"
         }
       ]
     };

@@ -21,7 +21,12 @@
     </template>
     <v-divider />
     <v-list nav dense>
-      <v-list-item class="ml-2" v-for="(item, i) in items" :key="i">
+      <v-list-item
+        @click="$vuetify.goTo(item.target, { easing: 'linear', duration: 100 })"
+        class="ml-2"
+        v-for="(item, i) in items"
+        :key="i"
+      >
         <v-list-item-icon>
           <v-icon v-text="item.icon" />
         </v-list-item-icon>
@@ -53,34 +58,42 @@ export default {
       this.drawerOpen = val;
     }
   },
-  data: () => ({
-    drawerOpen: false,
-    items: [
-      {
-        icon: "mdi-account",
-        text: "About me"
-      },
-      {
-        icon: "mdi-briefcase",
-        text: "Work experience"
-      },
-      {
-        icon: "mdi-school",
-        text: "Education"
-      },
-      {
-        icon: "mdi-tools",
-        text: "Technologies"
-      },
-      {
-        icon: "mdi-clipboard-check-multiple",
-        text: "Projects"
-      },
-      {
-        icon: "mdi-phone",
-        text: "Contact"
-      }
-    ]
-  })
+  data: function() {
+    return {
+      drawerOpen: false,
+      items: [
+        {
+          icon: "mdi-account",
+          text: "About me",
+          target: "#aboutMe"
+        },
+        {
+          icon: "mdi-briefcase",
+          text: "Work experience",
+          target: "#workExperience"
+        },
+        {
+          icon: "mdi-school",
+          text: "Education",
+          target: "#education"
+        },
+        {
+          icon: "mdi-tools",
+          text: "Technologies",
+          target: "#technologies"
+        },
+        {
+          icon: "mdi-clipboard-check-multiple",
+          text: "Projects",
+          target: "#projects"
+        },
+        {
+          icon: "mdi-phone",
+          text: "Contact",
+          target: "#contact"
+        }
+      ]
+    };
+  }
 };
 </script>

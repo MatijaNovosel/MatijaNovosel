@@ -71,7 +71,13 @@
           </span>
           <v-card class="pa-4" rounded="lg">
             <v-card-title class="orange--text font-weight-bold">
-              {{ workExperience.title }}
+              <a
+                class="text-decoration-none orange--text font-weight-bold text-h6"
+                :href="workExperience.link"
+              >
+                {{ workExperience.title }}
+                <v-icon small color="grey">mdi-open-in-new</v-icon>
+              </a>
             </v-card-title>
             <v-card-subtitle class="grey--text text--darken-2 font-weight-bold">
               {{ workExperience.subtitle }}
@@ -87,38 +93,28 @@
       <h2>Education</h2>
     </v-col>
     <v-col cols="12">
-      <v-expansion-panels>
-        <v-expansion-panel v-for="(educationItem, i) in education" :key="i">
-          <v-expansion-panel-header>
-            <v-list-item>
-              <v-list-item-avatar tile>
-                <v-img
-                  alt=""
-                  :src="educationItem.logo"
-                  v-if="educationItem.logo"
-                />
-                <v-icon large v-else>mdi-school</v-icon>
-              </v-list-item-avatar>
-              <v-list-item-content>
-                <v-list-item-title
-                  class="orange--text font-weight-bold text-h6 pb-2"
-                >
-                  {{ educationItem.title }}
-                </v-list-item-title>
-                <v-list-item-subtitle>
-                  {{ educationItem.subtitle }}
-                </v-list-item-subtitle>
-              </v-list-item-content>
-            </v-list-item>
-          </v-expansion-panel-header>
-          <v-expansion-panel-content>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </v-expansion-panel-content>
-        </v-expansion-panel>
-      </v-expansion-panels>
+      <v-list rounded="lg">
+        <v-list-item v-for="(educationItem, i) in education" :key="i">
+          <v-list-item-avatar tile>
+            <v-img alt="" :src="educationItem.logo" v-if="educationItem.logo" />
+            <v-icon large v-else>mdi-school</v-icon>
+          </v-list-item-avatar>
+          <v-list-item-content>
+            <v-list-item-title class="pb-2">
+              <a
+                class="text-decoration-none orange--text font-weight-bold text-h6"
+                :href="educationItem.link"
+              >
+                {{ educationItem.title }}
+                <v-icon small color="grey">mdi-open-in-new</v-icon>
+              </a>
+            </v-list-item-title>
+            <v-list-item-subtitle>
+              {{ educationItem.subtitle }}
+            </v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
     </v-col>
     <v-col cols="12" id="technologies">
       <h2>Technologies</h2>
@@ -190,6 +186,17 @@
     <v-col cols="12" id="projects">
       <h2>Projects</h2>
     </v-col>
+    <v-col cols="12">
+      <v-row>
+        <v-col cols="4" :key="i" v-for="(project, i) in projects">
+          <v-card>
+            <v-card-title>
+              {{ project.title }}
+            </v-card-title>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-col>
     <v-col cols="12" id="contact">
       <h2>Contact</h2>
     </v-col>
@@ -230,14 +237,16 @@ export default {
         description:
           "Software development on multiple company projects (Čistoća, Hrvatske Autoceste, Gradska plinara Zagreb, ePlatforma) using fullstack technologies. Mentoring and creating educational Javascript content for new and future employees.",
         from: new Date(1561932000000),
-        to: null
+        to: null,
+        link: "https://www.omega-software.hr/"
       },
       {
         title: "Maidea",
         subtitle: "Junior software developer",
         description: "Software development using fullstack technologies.",
         from: new Date(1525125600000),
-        to: new Date(1547766000000)
+        to: new Date(1547766000000),
+        link: "https://www.maidea.hr/"
       }
     ],
     education: [
@@ -246,7 +255,8 @@ export default {
         subtitle: "Master's degree (struc. spec. ing. techn. inf.)",
         from: "2020",
         to: "2022",
-        logo: "/tvz-logo.svg"
+        logo: "/tvz-logo.svg",
+        link: "https://www.tvz.hr/"
       },
       {
         title: "Zagreb university of applied sciences",
@@ -254,70 +264,68 @@ export default {
           "Bachelor of Engineering in Information Technology (bacc. ing. techn. inf.)",
         from: "2017",
         to: "2020",
-        logo: "/tvz-logo.svg"
+        logo: "/tvz-logo.svg",
+        link: "https://www.tvz.hr/"
       },
       {
         title: "Tehnička škola Ruđera Boškovića",
         subtitle: "Computer technician",
         from: "2013",
         to: "2017",
-        logo: null
+        logo: null,
+        link: "https://www.tsrb.hr/"
       }
     ],
     technologies: [
       {
         text: "Typescript",
         logo: "typescript",
-        logoColor: "white",
         color: "#007acc"
       },
       {
         text: "SASS&SCSS",
         logo: "sass",
-        logoColor: "white",
         color: "#cc6699"
       },
       {
         text: "Angular",
         logo: "angular",
-        logoColor: "white",
         color: "#dd0031"
       },
       {
         text: "Vue 3&2",
         logo: "vue-dot-js",
-        logoColor: "white",
         color: "#2bbc8a"
       },
       {
         text: "Vuetify",
         logo: "vuetify",
-        logoColor: "white",
         color: "#1867c0"
       },
       {
         text: "Quasar",
         logo: "quasar",
-        logoColor: "white",
         color: "#1976d2"
       },
       {
         text: "Buefy",
         logo: "buefy",
-        logoColor: "white",
         color: "#7957d5"
       },
       {
         text: "Electron",
         logo: "electron",
-        logoColor: "white",
         color: "#47848f"
       },
       {
         text: "React",
         logo: "react",
-        logoColor: "white",
         color: "#61dafb"
+      }
+    ],
+    projects: [
+      {
+        title: "LMS"
       }
     ]
   })

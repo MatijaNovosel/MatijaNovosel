@@ -1,5 +1,5 @@
 <template>
-  <v-row class="pb-4" :class="{ 'px-3': $vuetify.breakpoint.smAndDown }">
+  <v-row class="pb-4 px-3">
     <v-col cols="12" class="mt-5" id="aboutMe" style="z-index: 3">
       <h2>{{ $t("sections.aboutMe") }}</h2>
     </v-col>

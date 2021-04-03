@@ -32,7 +32,7 @@ export default {
       finApp: "Aplikacija za praćenje financija.",
       finAppMobile: "Mobilna implementacija FinAppa.",
       downloader: "Program za preuzimanje pjesama pomoću Electrona.",
-      onexprojekti: "Stranica za graditeljsku tvrtku Onexprojekti.",
+      onexProjekti: "Stranica za graditeljsku tvrtku Onexprojekti.",
       hoc: "Bullet hell RPG roguelike igra.",
       gymDash: "Web aplikacija za upravljanje logistikom teretana.",
       redditClone: "Kopija stranice Reddit."

@@ -39,13 +39,22 @@
       <v-divider />
       <div class="d-flex justify-center mt-4">
         <v-img
+          @click="switchLocale('en')"
+          style="cursor: pointer"
           class="mr-4"
           max-height="30"
           max-width="30"
           alt=""
           src="/uk-alt.svg"
         />
-        <v-img max-height="30" max-width="30" alt="" src="/hr-alt.svg" />
+        <v-img
+          @click="switchLocale('hr')"
+          style="cursor: pointer"
+          max-height="30"
+          max-width="30"
+          alt=""
+          src="/hr-alt.svg"
+        />
       </div>
     </template>
   </v-navigation-drawer>
@@ -71,47 +80,58 @@ export default {
       this.$emit("input", val);
     },
     scrollTo(target) {
+      this.drawerOpen = false;
       const el = document.getElementById(target);
       const y = el.getBoundingClientRect().top + window.pageYOffset;
       window.scrollTo({ top: y + -65 });
+    },
+    switchLocale(locale) {
+      if (this.locale == locale) {
+        return;
+      }
+      this.setLocale(locale);
+      this.$i18n.locale = locale;
+      this.$vuetify.lang.current = locale;
     }
   },
-  data: function() {
-    return {
-      drawerOpen: false,
-      items: [
+  computed: {
+    items() {
+      return [
         {
           icon: "mdi-account",
-          text: "About me",
+          text: this.$t("sections.aboutMe"),
           target: "aboutMe"
         },
         {
           icon: "mdi-briefcase",
-          text: "Work experience",
+          text: this.$t("sections.workExperience"),
           target: "workExperience"
         },
         {
           icon: "mdi-school",
-          text: "Education",
+          text: this.$t("sections.education"),
           target: "education"
         },
         {
           icon: "mdi-tools",
-          text: "Technologies",
+          text: this.$t("sections.technologies"),
           target: "technologies"
         },
         {
           icon: "mdi-clipboard-check-multiple",
-          text: "Projects",
+          text: this.$t("sections.projects"),
           target: "projects"
         },
         {
           icon: "mdi-phone",
-          text: "Contact",
+          text: this.$t("sections.contact"),
           target: "contact"
         }
-      ]
-    };
-  }
+      ];
+    }
+  },
+  data: () => ({
+    drawerOpen: false
+  })
 };
 </script>

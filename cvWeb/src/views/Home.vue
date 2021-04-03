@@ -1,41 +1,29 @@
 <template>
   <v-row class="pb-4" :class="{ 'px-3': $vuetify.breakpoint.smAndDown }">
     <v-col cols="12" class="mt-5" id="aboutMe" style="z-index: 3">
-      <h2>About me</h2>
+      <h2>{{ $t("sections.aboutMe") }}</h2>
     </v-col>
     <v-col cols="12" style="z-index: 3">
       <v-card rounded="lg">
         <v-toolbar height="25" elevation="0" />
         <v-card-text>
           <p>
-            I am a developer with a large interest in creating applications on
-            the web and improving my knowledge and abilities as a person.
+            {{ $t("aboutMe.1") }}
           </p>
           <p>
-            Born in Croatia, I grew up in a rural farm area with future
-            intentions of seeking a career in computer technologies which was
-            later granted to me via the technical school of Ruđer Bošković where
-            I spent 4 years of my secondary education and in the end receiving
-            the title of Computer technician.
+            {{ $t("aboutMe.2") }}
           </p>
           <p>
-            During this time, however, I began getting interested in other
-            topics such as programming and developing video games and thus
-            enlisted in the Zagreb University of applied sciences, further
-            improving my skills, getting two jobs as a junior developer and
-            after 3 years getting the title of Bachelor of Engineering in
-            Information Technology (bacc. ing. techn. inf.).
+            {{ $t("aboutMe.3") }}
           </p>
           <p>
-            In the present time I am finishing my education in the field of
-            Information technology with the intention of acquiring a Master's
-            degree (struc. spec. ing. techn. inf.).
+            {{ $t("aboutMe.4") }}
           </p>
         </v-card-text>
       </v-card>
     </v-col>
     <v-col cols="12" id="workExperience" style="z-index: 3">
-      <h2>Work experience</h2>
+      <h2>{{ $t("sections.workExperience") }}</h2>
     </v-col>
     <v-col cols="12" style="z-index: 3">
       <v-timeline :dense="$vuetify.breakpoint.smAndDown">
@@ -46,34 +34,19 @@
           small
           :key="i"
         >
-          <span slot="opposite" class="text-h6">
-            <span>
-              {{ format(workExperience.from, "MMMM, yyyy.") }}
-            </span>
-            <span class="mx-1">
-              -
-            </span>
-            <span>
-              {{
-                workExperience.to
-                  ? format(workExperience.to, "MMMM, yyyy.")
-                  : "Present"
-              }}
-            </span>
-            <span class="grey--text">
-              ({{
-                formatDistance(
-                  workExperience.from,
-                  workExperience.to ? workExperience.to : new Date()
-                )
-              }})
-            </span>
+          <span slot="opposite">
+            <div
+              v-html="formatWorkDate(workExperience.from, workExperience.to)"
+            />
           </span>
           <v-card class="pa-4" rounded="lg">
             <v-card-title class="orange--text font-weight-bold">
               <a
                 class="text-decoration-none orange--text font-weight-bold"
-                :class="{ 'text-h6': $vuetify.breakpoint.mdAndUp, 'text-subtitle-1': $vuetify.breakpoint.smAndDown }"
+                :class="{
+                  'text-h6': $vuetify.breakpoint.mdAndUp,
+                  'text-subtitle-1': $vuetify.breakpoint.smAndDown
+                }"
                 :href="workExperience.link"
               >
                 {{ workExperience.title }}
@@ -91,11 +64,15 @@
       </v-timeline>
     </v-col>
     <v-col cols="12" id="education">
-      <h2>Education</h2>
+      <h2>{{ $t("sections.education") }}</h2>
     </v-col>
     <v-col cols="12">
       <v-list rounded>
-        <v-list-item v-for="(educationItem, i) in education" :key="i">
+        <v-list-item
+          three-line
+          v-for="(educationItem, i) in education"
+          :key="i"
+        >
           <v-list-item-avatar tile>
             <v-img alt="" :src="educationItem.logo" v-if="educationItem.logo" />
             <v-icon large v-else>mdi-school</v-icon>
@@ -113,17 +90,20 @@
             <v-list-item-subtitle>
               {{ educationItem.subtitle }}
             </v-list-item-subtitle>
+            <v-list-item-subtitle class="white--text">
+              {{ `${educationItem.from} - ${educationItem.to}` }}
+            </v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
       </v-list>
     </v-col>
     <v-col cols="12" id="technologies">
-      <h2>Technologies</h2>
+      <h2>{{ $t("sections.technologies") }}</h2>
     </v-col>
     <v-col cols="12">
       <v-row>
         <v-col cols="12" class="pb-0">
-          <h3 class="grey--text text--lighten-1">Frontend</h3>
+          <h3 class="grey--text text--lighten-1">{{ $t("frontend") }}</h3>
         </v-col>
         <v-col cols="12">
           <v-chip
@@ -145,7 +125,7 @@
           </v-chip>
         </v-col>
         <v-col cols="12" class="pb-0">
-          <h3 class="grey--text text--lighten-1">Backend</h3>
+          <h3 class="grey--text text--lighten-1">{{ $t("backend") }}</h3>
         </v-col>
         <v-col cols="12">
           <v-chip
@@ -167,7 +147,7 @@
           </v-chip>
         </v-col>
         <v-col cols="12" class="pb-0">
-          <h3 class="grey--text text--lighten-1">Other</h3>
+          <h3 class="grey--text text--lighten-1">{{ $t("other") }}</h3>
         </v-col>
         <v-col cols="12">
           <v-chip
@@ -191,12 +171,12 @@
       </v-row>
     </v-col>
     <v-col cols="12" id="projects">
-      <h2>Projects</h2>
+      <h2>{{ $t("sections.projects") }}</h2>
     </v-col>
     <v-col cols="12">
       <v-row>
         <v-col cols="12" md="4" :key="i" v-for="(project, i) in projects">
-          <v-card>
+          <v-card rounded="lg">
             <v-card-title class="orange--text">
               {{ project.title }}
             </v-card-title>
@@ -213,7 +193,11 @@
               >
                 <v-icon v-text="link.icon" />
               </v-btn>
-              <v-btn icon>
+              <v-btn
+                icon
+                v-if="project.showPreview"
+                :disabled="project.previewDisabled"
+              >
                 <v-icon>mdi-eye</v-icon>
               </v-btn>
             </v-card-actions>
@@ -222,7 +206,7 @@
       </v-row>
     </v-col>
     <v-col cols="12" id="contact">
-      <h2>Contact</h2>
+      <h2>{{ $t("sections.contact") }}</h2>
     </v-col>
     <v-col cols="12">
       <v-list>
@@ -256,63 +240,213 @@
 
 <script>
 import { format, formatDistance } from "date-fns";
+import { hr, enUS } from "date-fns/locale";
+import LocaleMixin from "../mixins/localeMixin";
 
 export default {
   name: "Home",
+  mixins: [LocaleMixin],
   methods: {
     format,
     formatDistance,
+    capitalize(s) {
+      return s && s[0].toUpperCase() + s.slice(1);
+    },
+    formatWorkDate(from, to) {
+      return `
+        <span>
+          ${this.capitalize(
+            format(from, "LLLL, yyyy.", {
+              locale: this.locale == "hr" ? hr : enUS
+            })
+          )}
+        </span>
+        <span class="mx-1">
+          -
+        </span>
+        <span>
+          ${
+            to
+              ? this.capitalize(
+                  format(to, "LLLL, yyyy.", {
+                    locale: this.locale == "hr" ? hr : enUS
+                  })
+                )
+              : this.$t("present")
+          }
+        </span>
+        <span class="grey--text">
+          (${formatDistance(from, to ? to : new Date(), {
+            locale: this.locale == "hr" ? hr : enUS
+          })})
+        </span>
+      `;
+    },
     openInNew(url) {
       window.location.href = url;
     }
   },
+  computed: {
+    projects() {
+      return [
+        {
+          title: "LMS",
+          description: this.$t("projects.lms"),
+          showPreview: true,
+          previewDisabled: true,
+          links: [
+            { url: "https://github.com/MatijaNovosel/lms", icon: "mdi-github" }
+          ],
+          images: []
+        },
+        {
+          title: "FinApp",
+          description: this.$t("projects.finApp"),
+          showPreview: true,
+          previewDisabled: true,
+          links: [
+            {
+              url: "https://github.com/MatijaNovosel/fin-app",
+              icon: "mdi-github"
+            }
+          ],
+          images: []
+        },
+        {
+          title: "FinApp mobile",
+          description: this.$t("projects.finAppMobile"),
+          previewDisabled: true,
+          links: [
+            {
+              url: "https://github.com/MatijaNovosel/fin-app-mobile",
+              icon: "mdi-github"
+            }
+          ],
+          images: []
+        },
+        {
+          title: "Downloader",
+          description: this.$t("projects.downloader"),
+          showPreview: true,
+          previewDisabled: true,
+          links: [
+            {
+              url: "https://github.com/MatijaNovosel/downloader",
+              icon: "mdi-github"
+            }
+          ],
+          images: []
+        },
+        {
+          title: "Onexprojekti",
+          description: this.$t("projects.onexProjekti"),
+          showPreview: false,
+          previewDisabled: false,
+          links: [
+            {
+              url: "https://onexprojekti.hr/",
+              icon: "mdi-link"
+            }
+          ],
+          images: []
+        },
+        {
+          title: "Heroes of crimson",
+          description: this.$t("projects.hoc"),
+          showPreview: true,
+          previewDisabled: true,
+          links: [
+            {
+              url: "https://github.com/MatijaNovosel/heroes-of-crimson",
+              icon: "mdi-github"
+            }
+          ],
+          images: []
+        },
+        {
+          title: "GymDash",
+          description: this.$t("projects.gymDash"),
+          showPreview: true,
+          previewDisabled: true,
+          links: [
+            {
+              url: "https://github.com/MatijaNovosel/gym-dash-ui",
+              icon: "mdi-github"
+            }
+          ],
+          images: []
+        },
+        {
+          title: "Reddit clone",
+          description: this.$t("projects.redditClone"),
+          showPreview: true,
+          previewDisabled: true,
+          links: [
+            {
+              url: "https://github.com/MatijaNovosel/react-reddit-clone",
+              icon: "mdi-github"
+            }
+          ],
+          images: []
+        }
+      ];
+    },
+    education() {
+      return [
+        {
+          title: this.$t("tvz"),
+          subtitle: this.$t("mastersDegree"),
+          from: "2020",
+          to: "2022",
+          logo: "/tvz-logo.svg",
+          link: "https://www.tvz.hr/"
+        },
+        {
+          title: this.$t("tvz"),
+          subtitle: this.$t("bachelorsDegree"),
+          from: "2017",
+          to: "2020",
+          logo: "/tvz-logo.svg",
+          link: "https://www.tvz.hr/",
+          documents: [
+            {
+              name: "Diploma",
+              contents: null
+            }
+          ]
+        },
+        {
+          title: "Tehnička škola Ruđera Boškovića",
+          subtitle: this.$t("computerTechnician"),
+          from: "2013",
+          to: "2017",
+          logo: null,
+          link: "https://www.tsrb.hr/"
+        }
+      ];
+    },
+    workExperiences() {
+      return [
+        {
+          title: "Omega software",
+          subtitle: this.$t("juniorSoftwareDeveloper"),
+          description: this.$t("omegaExperience"),
+          from: new Date(1561932000000),
+          to: null,
+          link: "https://www.omega-software.hr/"
+        },
+        {
+          title: "Maidea",
+          subtitle: this.$t("juniorSoftwareDeveloper"),
+          description: this.$t("maideaExperience"),
+          from: new Date(1525125600000),
+          to: new Date(1547766000000),
+          link: "https://www.maidea.hr/"
+        }
+      ];
+    }
+  },
   data: () => ({
-    workExperiences: [
-      {
-        title: "Omega software",
-        subtitle: "Junior software developer",
-        description:
-          "Software development on multiple company projects (Čistoća, Hrvatske Autoceste, Gradska plinara Zagreb, ePlatforma) using fullstack technologies. Mentoring and creating educational Javascript content for new and future employees.",
-        from: new Date(1561932000000),
-        to: null,
-        link: "https://www.omega-software.hr/"
-      },
-      {
-        title: "Maidea",
-        subtitle: "Junior software developer",
-        description: "Software development using fullstack technologies.",
-        from: new Date(1525125600000),
-        to: new Date(1547766000000),
-        link: "https://www.maidea.hr/"
-      }
-    ],
-    education: [
-      {
-        title: "Zagreb university of applied sciences",
-        subtitle: "Master's degree (struc. spec. ing. techn. inf.)",
-        from: "2020",
-        to: "2022",
-        logo: "/tvz-logo.svg",
-        link: "https://www.tvz.hr/"
-      },
-      {
-        title: "Zagreb university of applied sciences",
-        subtitle:
-          "Bachelor of Engineering in Information Technology (bacc. ing. techn. inf.)",
-        from: "2017",
-        to: "2020",
-        logo: "/tvz-logo.svg",
-        link: "https://www.tvz.hr/"
-      },
-      {
-        title: "Tehnička škola Ruđera Boškovića",
-        subtitle: "Computer technician",
-        from: "2013",
-        to: "2017",
-        logo: null,
-        link: "https://www.tsrb.hr/"
-      }
-    ],
     technologies: [
       {
         text: "Typescript",
@@ -445,93 +579,6 @@ export default {
         logo: "flutter",
         color: "#02569b",
         group: "other"
-      }
-    ],
-    projects: [
-      {
-        title: "LMS",
-        description: "Learning management system.",
-        links: [
-          { url: "https://github.com/MatijaNovosel/lms", icon: "mdi-github" }
-        ],
-        images: []
-      },
-      {
-        title: "FinApp",
-        description: "App for managing finances.",
-        links: [
-          {
-            url: "https://github.com/MatijaNovosel/fin-app",
-            icon: "mdi-github"
-          }
-        ],
-        images: []
-      },
-      {
-        title: "FinApp mobile",
-        description: "FinApp mobile implementation.",
-        links: [
-          {
-            url: "https://github.com/MatijaNovosel/fin-app-mobile",
-            icon: "mdi-github"
-          }
-        ],
-        images: []
-      },
-      {
-        title: "Downloader",
-        description: "Electron song downloader.",
-        links: [
-          {
-            url: "https://github.com/MatijaNovosel/downloader",
-            icon: "mdi-github"
-          }
-        ],
-        images: []
-      },
-      {
-        title: "Onexprojekti",
-        description: "Construction company website.",
-        links: [
-          {
-            url: "https://onexprojekti.hr/",
-            icon: "mdi-link"
-          }
-        ],
-        images: []
-      },
-      {
-        title: "Heroes of crimson",
-        description: "Bullet hell RPG roguelike.",
-        links: [
-          {
-            url: "https://github.com/MatijaNovosel/heroes-of-crimson",
-            icon: "mdi-github"
-          }
-        ],
-        images: []
-      },
-      {
-        title: "GymDash",
-        description: "Gym management web application.",
-        links: [
-          {
-            url: "https://github.com/MatijaNovosel/gym-dash-ui",
-            icon: "mdi-github"
-          }
-        ],
-        images: []
-      },
-      {
-        title: "Reddit clone",
-        description: "Reddit react clone.",
-        links: [
-          {
-            url: "https://github.com/MatijaNovosel/react-reddit-clone",
-            icon: "mdi-github"
-          }
-        ],
-        images: []
       }
     ],
     contacts: [

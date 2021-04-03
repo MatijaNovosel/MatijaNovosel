@@ -1,9 +1,9 @@
 <template>
-  <v-row :class="{ 'px-3': $vuetify.breakpoint.smAndDown }">
-    <v-col cols="12" class="mt-5" id="aboutMe">
+  <v-row class="pb-4" :class="{ 'px-3': $vuetify.breakpoint.smAndDown }">
+    <v-col cols="12" class="mt-5" id="aboutMe" style="z-index: 3">
       <h2>About me</h2>
     </v-col>
-    <v-col cols="12">
+    <v-col cols="12" style="z-index: 3">
       <v-card rounded="lg">
         <v-toolbar height="25" elevation="0" />
         <v-card-text>
@@ -34,10 +34,10 @@
         </v-card-text>
       </v-card>
     </v-col>
-    <v-col cols="12" id="workExperience">
+    <v-col cols="12" id="workExperience" style="z-index: 3">
       <h2>Work experience</h2>
     </v-col>
-    <v-col cols="12">
+    <v-col cols="12" style="z-index: 3">
       <v-timeline :dense="$vuetify.breakpoint.smAndDown">
         <v-timeline-item
           color="orange"
@@ -72,7 +72,8 @@
           <v-card class="pa-4" rounded="lg">
             <v-card-title class="orange--text font-weight-bold">
               <a
-                class="text-decoration-none orange--text font-weight-bold text-h6"
+                class="text-decoration-none orange--text font-weight-bold"
+                :class="{ 'text-h6': $vuetify.breakpoint.mdAndUp, 'text-subtitle-1': $vuetify.breakpoint.smAndDown }"
                 :href="workExperience.link"
               >
                 {{ workExperience.title }}
@@ -173,7 +174,9 @@
             :color="technology.color"
             label
             class="ma-1"
-            v-for="(technology, i) in technologies"
+            v-for="(technology, i) in technologies.filter(
+              (x) => x.group == 'other'
+            )"
             :key="i"
           >
             <v-img
@@ -233,12 +236,16 @@
             </v-list-item-title>
             <v-list-item-subtitle>
               <a
+                v-if="contact.title != 'Email'"
                 class="text-decoration-none grey--text text--lighten-2"
                 :href="contact.subtitle"
               >
                 {{ contact.subtitle }}
                 <v-icon small color="grey">mdi-open-in-new</v-icon>
               </a>
+              <span v-else>
+                {{ contact.subtitle }}
+              </span>
             </v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
@@ -406,35 +413,40 @@ export default {
       {
         text: "MySQL",
         logo: "mysql",
-        color: "#4479A1",
+        color: "#4479a1",
         group: "other"
       },
       {
-        text: "MySQL",
-        logo: "mysql",
-        color: "#4479A1",
+        text: "TSQL",
+        logo: "microsoftsqlserver",
+        color: "#cc2927",
+        group: "other"
+      },
+      {
+        text: "Firebase",
+        logo: "firebase",
+        color: "#ffca28",
+        group: "other"
+      },
+      {
+        text: "Firebase",
+        logo: "firebase",
+        color: "#e10098",
+        group: "other"
+      },
+      {
+        text: "JWT tokens",
+        logo: "jsonwebtokens",
+        color: "#000000",
+        group: "other"
+      },
+      {
+        text: "Flutter",
+        logo: "flutter",
+        color: "#02569b",
         group: "other"
       }
     ],
-    /*
-
-              <img
-                src="https://img.shields.io/badge/%20TSQL-informational?style=plastic&logo=microsoft-sql-server&logoColor=white&color=CC2927"
-              />
-              <img
-                src="https://img.shields.io/badge/%20Firebase%20&%20Firestore-informational?style=plastic&logo=firebase&logoColor=f6820d&color=FFCA28"
-              />
-              <img
-                src="https://img.shields.io/badge/%20GraphQL-informational?style=plastic&logo=graphql&logoColor=fd43c0&color=E10098"
-              />
-              <img
-                src="https://img.shields.io/badge/%20JSON%20Web%20Tokens-informational?style=plastic&logo=json-web-tokens&logoColor=E10098&color=000000"
-              />
-              <img
-                src="https://img.shields.io/badge/Flutter-informational?style=plastic&logo=flutter&logoColor=ffffff&color=02569B"
-              />
-
-    */
     projects: [
       {
         title: "LMS",
@@ -494,6 +506,28 @@ export default {
         links: [
           {
             url: "https://github.com/MatijaNovosel/heroes-of-crimson",
+            icon: "mdi-github"
+          }
+        ],
+        images: []
+      },
+      {
+        title: "GymDash",
+        description: "Gym management web application.",
+        links: [
+          {
+            url: "https://github.com/MatijaNovosel/gym-dash-ui",
+            icon: "mdi-github"
+          }
+        ],
+        images: []
+      },
+      {
+        title: "Reddit clone",
+        description: "Reddit react clone.",
+        links: [
+          {
+            url: "https://github.com/MatijaNovosel/react-reddit-clone",
             icon: "mdi-github"
           }
         ],

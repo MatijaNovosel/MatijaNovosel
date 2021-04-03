@@ -27,7 +27,29 @@ html {
   -webkit-text-fill-color: transparent;
 }
 
-.v-list-item__title, .v-list-item__subtitle {
+.v-list-item__title,
+.v-list-item__subtitle {
   text-overflow: initial;
   white-space: normal;
+}
+
+body:after,
+body:before {
+  -webkit-mask-box-image: url('/mask.svg');
+}
+
+body:after,
+body:before {
+  display: block;
+  height: 650px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+body:after {
+  content: "";
+  background: linear-gradient(135deg, #ff7a18, #af002d 75%);
+  z-index: 1;
 }

@@ -35,6 +35,19 @@
         </v-list-item-content>
       </v-list-item>
     </v-list>
+    <template v-if="$vuetify.breakpoint.mdAndUp">
+      <v-divider />
+      <div class="d-flex justify-center mt-4">
+        <v-img
+          class="mr-4"
+          max-height="30"
+          max-width="30"
+          alt=""
+          src="/uk-alt.svg"
+        />
+        <v-img max-height="30" max-width="30" alt="" src="/hr-alt.svg" />
+      </div>
+    </template>
   </v-navigation-drawer>
 </template>
 

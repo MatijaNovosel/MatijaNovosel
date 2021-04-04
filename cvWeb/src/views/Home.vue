@@ -105,13 +105,13 @@
                 </template>
                 <v-list dense>
                   <v-list-item
-                    @click="downloadFile(document.contents, document.name)"
+                    @click="openInNew(document.contents)"
                     v-for="(document, i) in educationItem.documents"
                     :key="i"
                   >
                     <v-list-item-title>
                       {{ document.name }}
-                      <v-icon class="ml-2" small>mdi-download</v-icon>
+                      <v-icon color="orange" class="ml-2" small>mdi-google-drive</v-icon>
                     </v-list-item-title>
                   </v-list-item>
                 </v-list>
@@ -266,11 +266,6 @@
 import { format, formatDistance } from "date-fns";
 import { hr, enUS } from "date-fns/locale";
 import LocaleMixin from "../mixins/localeMixin";
-import {
-  diploma,
-  diplomaSupplementEnBase64,
-  diplomaSupplementHrBase64
-} from "../constants";
 
 export default {
   name: "Home",
@@ -278,32 +273,8 @@ export default {
   methods: {
     format,
     formatDistance,
-    async dataUrlToFile(dataUrl, fileName, mimeType) {
-      const res = await fetch(dataUrl);
-      const blob = await res.blob();
-      return new File([blob], fileName, { type: mimeType });
-    },
-    async download(file) {
-      if (window.navigator.msSaveOrOpenBlob) {
-        window.navigator.msSaveOrOpenBlob(file, file.name);
-      } else {
-        const fileURL = window.URL.createObjectURL(file);
-        const link = document.createElement("a");
-        link.href = fileURL;
-        link.setAttribute("download", file.name);
-        link.click();
-      }
-    },
     capitalize(s) {
       return s && s[0].toUpperCase() + s.slice(1);
-    },
-    async downloadFile(base64, fileName) {
-      const file = await this.dataUrlToFile(
-        `data:application/pdf;base64,${base64}`,
-        fileName,
-        "application/pdf"
-      );
-      this.download(file);
     },
     formatWorkDate(from, to) {
       return `
@@ -467,15 +438,15 @@ export default {
           documents: [
             {
               name: "Diploma",
-              contents: diploma
+              contents: "https://drive.google.com/file/d/1a7rmav5tfiC9TkIU1xxoIT7K5W5FmWYn/view?usp=sharing"
             },
             {
               name: "Diploma supplement (EN)",
-              contents: diplomaSupplementEnBase64
+              contents: "https://drive.google.com/file/d/1_lZiW1ffznlU3fIBaDqnMld1JhqXKf1z/view?usp=sharing"
             },
             {
               name: "Diploma supplement (HR)",
-              contents: diplomaSupplementHrBase64
+              contents: "https://drive.google.com/file/d/11yYwWIHhTV70wzne2YbVSEQzbwBCWKXG/view?usp=sharing"
             }
           ]
         },

@@ -54,7 +54,7 @@ export default {
     }
   },
   data: () => ({
-    drawer: true,
+    drawer: false,
     snackbar: false,
     snackbarMessage: "",
     snackbarColor: "primary"

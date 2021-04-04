@@ -68,33 +68,57 @@
     </v-col>
     <v-col cols="12">
       <v-list rounded>
-        <v-list-item
-          three-line
-          v-for="(educationItem, i) in education"
-          :key="i"
-        >
-          <v-list-item-avatar tile>
-            <v-img alt="" :src="educationItem.logo" v-if="educationItem.logo" />
-            <v-icon large v-else>mdi-school</v-icon>
-          </v-list-item-avatar>
-          <v-list-item-content>
-            <v-list-item-title class="pb-2">
-              <a
-                class="text-decoration-none orange--text font-weight-bold text-h6"
-                :href="educationItem.link"
-              >
-                {{ educationItem.title }}
-                <v-icon small color="grey">mdi-open-in-new</v-icon>
-              </a>
-            </v-list-item-title>
-            <v-list-item-subtitle>
-              {{ educationItem.subtitle }}
-            </v-list-item-subtitle>
-            <v-list-item-subtitle class="white--text">
-              {{ `${educationItem.from} - ${educationItem.to}` }}
-            </v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
+        <template v-for="(educationItem, i) in education">
+          <v-divider v-if="educationItem.divider" :key="i" />
+          <v-list-item v-else three-line :key="i">
+            <v-list-item-avatar tile>
+              <v-img
+                alt=""
+                :src="educationItem.logo"
+                v-if="educationItem.logo"
+              />
+              <v-icon large v-else>mdi-school</v-icon>
+            </v-list-item-avatar>
+            <v-list-item-content>
+              <v-list-item-title>
+                <a
+                  class="text-decoration-none orange--text font-weight-bold text-h6"
+                  :href="educationItem.link"
+                >
+                  {{ educationItem.title }}
+                  <v-icon small color="grey">mdi-open-in-new</v-icon>
+                </a>
+              </v-list-item-title>
+              <v-list-item-subtitle>
+                {{ educationItem.subtitle }}
+              </v-list-item-subtitle>
+              <v-list-item-subtitle class="white--text">
+                {{ `${educationItem.from} - ${educationItem.to}` }}
+              </v-list-item-subtitle>
+            </v-list-item-content>
+            <v-list-item-action v-if="educationItem.documents">
+              <v-menu bottom left>
+                <template #activator="{ on, attrs }">
+                  <v-btn dark icon v-bind="attrs" v-on="on">
+                    <v-icon>mdi-dots-vertical</v-icon>
+                  </v-btn>
+                </template>
+                <v-list dense>
+                  <v-list-item
+                    @click="downloadFile(document.contents, document.name)"
+                    v-for="(document, i) in educationItem.documents"
+                    :key="i"
+                  >
+                    <v-list-item-title>
+                      {{ document.name }}
+                      <v-icon class="ml-2" small>mdi-download</v-icon>
+                    </v-list-item-title>
+                  </v-list-item>
+                </v-list>
+              </v-menu>
+            </v-list-item-action>
+          </v-list-item>
+        </template>
       </v-list>
     </v-col>
     <v-col cols="12" id="technologies">
@@ -242,6 +266,11 @@
 import { format, formatDistance } from "date-fns";
 import { hr, enUS } from "date-fns/locale";
 import LocaleMixin from "../mixins/localeMixin";
+import {
+  diploma,
+  diplomaSupplementEnBase64,
+  diplomaSupplementHrBase64
+} from "../constants";
 
 export default {
   name: "Home",
@@ -249,8 +278,32 @@ export default {
   methods: {
     format,
     formatDistance,
+    async dataUrlToFile(dataUrl, fileName, mimeType) {
+      const res = await fetch(dataUrl);
+      const blob = await res.blob();
+      return new File([blob], fileName, { type: mimeType });
+    },
+    async download(file) {
+      if (window.navigator.msSaveOrOpenBlob) {
+        window.navigator.msSaveOrOpenBlob(file, file.name);
+      } else {
+        const fileURL = window.URL.createObjectURL(file);
+        const link = document.createElement("a");
+        link.href = fileURL;
+        link.setAttribute("download", file.name);
+        link.click();
+      }
+    },
     capitalize(s) {
       return s && s[0].toUpperCase() + s.slice(1);
+    },
+    async downloadFile(base64, fileName) {
+      const file = await this.dataUrlToFile(
+        `data:application/pdf;base64,${base64}`,
+        fileName,
+        "application/pdf"
+      );
+      this.download(file);
     },
     formatWorkDate(from, to) {
       return `
@@ -402,6 +455,9 @@ export default {
           link: "https://www.tvz.hr/"
         },
         {
+          divider: true
+        },
+        {
           title: this.$t("tvz"),
           subtitle: this.$t("bachelorsDegree"),
           from: "2017",
@@ -411,9 +467,20 @@ export default {
           documents: [
             {
               name: "Diploma",
-              contents: null
+              contents: diploma
+            },
+            {
+              name: "Diploma supplement (EN)",
+              contents: diplomaSupplementEnBase64
+            },
+            {
+              name: "Diploma supplement (HR)",
+              contents: diplomaSupplementHrBase64
             }
           ]
+        },
+        {
+          divider: true
         },
         {
           title: "Tehnička škola Ruđera Boškovića",

@@ -63,7 +63,7 @@
         </v-timeline-item>
       </v-timeline>
     </v-col>
-    <v-col cols="12" id="education" v-intersect="onIntersect">
+    <v-col cols="12" id="education">
       <h2>{{ $t("sections.education") }}</h2>
     </v-col>
     <v-col cols="12">
@@ -262,7 +262,7 @@
       </v-list>
     </v-col>
     <v-btn
-      v-show="!isIntersecting"
+      v-show="showFab"
       @click="scrollToTop"
       small
       color="orange"
@@ -284,11 +284,21 @@ import LocaleMixin from "../mixins/localeMixin";
 export default {
   name: "Home",
   mixins: [LocaleMixin],
+  created() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
   methods: {
     format,
     formatDistance,
-    onIntersect(entries) {
-      this.isIntersecting = entries[0].isIntersecting;
+    handleScroll() {
+      if (window.scrollY > this.percentage) {
+        this.showFab = true;
+        return;
+      }
+      this.showFab = false;
     },
     scrollToTop() {
       window.scrollTo({ top: 0 });
@@ -331,6 +341,9 @@ export default {
     }
   },
   computed: {
+    percentage() {
+      return document.documentElement.scrollHeight * 0.3;
+    },
     projects() {
       return [
         {
@@ -513,7 +526,7 @@ export default {
     }
   },
   data: () => ({
-    isIntersecting: false,
+    showFab: false,
     technologies: [
       {
         text: "Typescript",

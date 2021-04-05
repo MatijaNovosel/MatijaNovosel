@@ -111,7 +111,9 @@
                   >
                     <v-list-item-title>
                       {{ document.name }}
-                      <v-icon color="orange" class="ml-2" small>mdi-google-drive</v-icon>
+                      <v-icon color="orange" class="ml-2" small
+                        >mdi-google-drive</v-icon
+                      >
                     </v-list-item-title>
                   </v-list-item>
                 </v-list>
@@ -438,15 +440,18 @@ export default {
           documents: [
             {
               name: "Diploma",
-              contents: "https://drive.google.com/file/d/1a7rmav5tfiC9TkIU1xxoIT7K5W5FmWYn/view?usp=sharing"
+              contents:
+                "https://drive.google.com/file/d/1a7rmav5tfiC9TkIU1xxoIT7K5W5FmWYn/view?usp=sharing"
             },
             {
               name: "Diploma supplement (EN)",
-              contents: "https://drive.google.com/file/d/1_lZiW1ffznlU3fIBaDqnMld1JhqXKf1z/view?usp=sharing"
+              contents:
+                "https://drive.google.com/file/d/1_lZiW1ffznlU3fIBaDqnMld1JhqXKf1z/view?usp=sharing"
             },
             {
               name: "Diploma supplement (HR)",
-              contents: "https://drive.google.com/file/d/11yYwWIHhTV70wzne2YbVSEQzbwBCWKXG/view?usp=sharing"
+              contents:
+                "https://drive.google.com/file/d/11yYwWIHhTV70wzne2YbVSEQzbwBCWKXG/view?usp=sharing"
             }
           ]
         },
@@ -601,8 +606,8 @@ export default {
         group: "other"
       },
       {
-        text: "Firebase",
-        logo: "firebase",
+        text: "GraphQL",
+        logo: "graphql",
         color: "#e10098",
         group: "other"
       },

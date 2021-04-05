@@ -63,7 +63,7 @@
         </v-timeline-item>
       </v-timeline>
     </v-col>
-    <v-col cols="12" id="education">
+    <v-col cols="12" id="education" v-intersect="onIntersect">
       <h2>{{ $t("sections.education") }}</h2>
     </v-col>
     <v-col cols="12">
@@ -261,6 +261,18 @@
         </v-list-item>
       </v-list>
     </v-col>
+    <v-btn
+      v-show="!isIntersecting"
+      @click="scrollToTop"
+      small
+      color="orange"
+      fixed
+      fab
+      bottom
+      right
+    >
+      <v-icon large color="black">mdi-menu-up</v-icon>
+    </v-btn>
   </v-row>
 </template>
 
@@ -275,6 +287,12 @@ export default {
   methods: {
     format,
     formatDistance,
+    onIntersect(entries) {
+      this.isIntersecting = entries[0].isIntersecting;
+    },
+    scrollToTop() {
+      window.scrollTo({ top: 0 });
+    },
     capitalize(s) {
       return s && s[0].toUpperCase() + s.slice(1);
     },
@@ -452,6 +470,11 @@ export default {
               name: "Diploma supplement (HR)",
               contents:
                 "https://drive.google.com/file/d/11yYwWIHhTV70wzne2YbVSEQzbwBCWKXG/view?usp=sharing"
+            },
+            {
+              name: "Final thesis",
+              contents:
+                "https://drive.google.com/file/d/1Z1zJKxcwVezULPAQMI_p7bz5TGrX6Fko/view?usp=sharing"
             }
           ]
         },
@@ -490,6 +513,7 @@ export default {
     }
   },
   data: () => ({
+    isIntersecting: false,
     technologies: [
       {
         text: "Typescript",

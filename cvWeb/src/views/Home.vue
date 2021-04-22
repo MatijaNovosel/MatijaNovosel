@@ -6,18 +6,12 @@
     <v-col cols="12" style="z-index: 3">
       <v-card rounded="lg">
         <v-toolbar height="25" elevation="0" />
-        <v-card-text>
+        <v-card-text class="text-subtitle-1">
           <p>
             {{ $t("aboutMe.1") }}
           </p>
           <p>
             {{ $t("aboutMe.2") }}
-          </p>
-          <p>
-            {{ $t("aboutMe.3") }}
-          </p>
-          <p>
-            {{ $t("aboutMe.4") }}
           </p>
         </v-card-text>
       </v-card>
@@ -39,26 +33,31 @@
               v-html="formatWorkDate(workExperience.from, workExperience.to)"
             />
           </span>
-          <v-card class="pa-4" rounded="lg">
-            <v-card-title class="orange--text font-weight-bold">
-              <a
-                class="text-decoration-none orange--text font-weight-bold"
-                :class="{
-                  'text-h6': $vuetify.breakpoint.mdAndUp,
-                  'text-subtitle-1': $vuetify.breakpoint.smAndDown
-                }"
-                :href="workExperience.link"
+          <v-card rounded="lg">
+            <v-app-bar height="10" />
+            <div class="pa-4">
+              <v-card-title class="orange--text font-weight-bold">
+                <a
+                  class="text-decoration-none orange--text font-weight-bold"
+                  :class="{
+                    'text-h6': $vuetify.breakpoint.mdAndUp,
+                    'text-subtitle-1': $vuetify.breakpoint.smAndDown
+                  }"
+                  :href="workExperience.link"
+                >
+                  {{ workExperience.title }}
+                  <v-icon small color="grey">mdi-open-in-new</v-icon>
+                </a>
+              </v-card-title>
+              <v-card-subtitle
+                class="grey--text text--darken-2 font-weight-bold"
               >
-                {{ workExperience.title }}
-                <v-icon small color="grey">mdi-open-in-new</v-icon>
-              </a>
-            </v-card-title>
-            <v-card-subtitle class="grey--text text--darken-2 font-weight-bold">
-              {{ workExperience.subtitle }}
-            </v-card-subtitle>
-            <v-card-text>
-              {{ workExperience.description }}
-            </v-card-text>
+                {{ workExperience.subtitle }}
+              </v-card-subtitle>
+              <v-card-text>
+                {{ workExperience.description }}
+              </v-card-text>
+            </div>
           </v-card>
         </v-timeline-item>
       </v-timeline>
@@ -111,9 +110,9 @@
                   >
                     <v-list-item-title>
                       {{ document.name }}
-                      <v-icon color="orange" class="ml-2" small
-                        >mdi-google-drive</v-icon
-                      >
+                      <v-icon color="orange" class="ml-2" small>
+                        mdi-google-drive
+                      </v-icon>
                     </v-list-item-title>
                   </v-list-item>
                 </v-list>
@@ -201,8 +200,9 @@
     </v-col>
     <v-col cols="12">
       <v-row>
-        <v-col cols="12" md="4" :key="i" v-for="(project, i) in projects">
+        <v-col cols="12" md="6" lg="4" xl="3" :key="i" v-for="(project, i) in projects">
           <v-card rounded="lg">
+            <v-app-bar height="15" />
             <v-card-title class="orange--text">
               {{ project.title }}
             </v-card-title>
@@ -278,6 +278,36 @@ export default {
     capitalize(s) {
       return s && s[0].toUpperCase() + s.slice(1);
     },
+    dateAgo(date, end, locale) {
+      const startDate = new Date(date);
+      const diffDate = new Date((end == null ? new Date() : end) - startDate);
+
+      let res = "";
+      const years = diffDate.toISOString().slice(0, 4) - 1970;
+      const months = diffDate.getMonth();
+
+      if (locale == "en") {
+        if (years > 0) {
+          res += `${years} Year${years == 1 ? "" : "s"} `;
+        }
+        res += `${months} Month${months == 1 ? "" : "s"}`;
+      } else {
+        if (years > 0) {
+          res += `${years} Godin${
+            ["2", "3", "4"].includes(years.toString().slice(-1)) ? "e" : "a"
+          } `;
+        }
+        res += `${months} Mjese${
+          months == 1
+            ? "c"
+            : ["2", "3", "4"].includes(months.toString().slice(-1))
+            ? "ca"
+            : "ci"
+        }`;
+      }
+
+      return res;
+    },
     formatWorkDate(from, to) {
       return `
         <span>
@@ -302,9 +332,7 @@ export default {
           }
         </span>
         <span class="grey--text">
-          (${formatDistance(from, to ? to : new Date(), {
-            locale: this.locale == "hr" ? hr : enUS
-          })})
+          (${this.dateAgo(from, to, this.$i18n.locale.toLowerCase())})
         </span>
       `;
     },
@@ -318,7 +346,7 @@ export default {
         {
           title: "LMS",
           description: this.$t("projects.lms"),
-          showPreview: true,
+          showPreview: false,
           previewDisabled: true,
           links: [
             { url: "https://github.com/MatijaNovosel/lms", icon: "mdi-github" }
@@ -328,7 +356,7 @@ export default {
         {
           title: "FinApp",
           description: this.$t("projects.finApp"),
-          showPreview: true,
+          showPreview: false,
           previewDisabled: true,
           links: [
             {
@@ -353,7 +381,7 @@ export default {
         {
           title: "Downloader",
           description: this.$t("projects.downloader"),
-          showPreview: true,
+          showPreview: false,
           previewDisabled: true,
           links: [
             {
@@ -379,7 +407,7 @@ export default {
         {
           title: "Heroes of crimson",
           description: this.$t("projects.hoc"),
-          showPreview: true,
+          showPreview: false,
           previewDisabled: true,
           links: [
             {
@@ -392,7 +420,7 @@ export default {
         {
           title: "GymDash",
           description: this.$t("projects.gymDash"),
-          showPreview: true,
+          showPreview: false,
           previewDisabled: true,
           links: [
             {
@@ -405,7 +433,7 @@ export default {
         {
           title: "Reddit clone",
           description: this.$t("projects.redditClone"),
-          showPreview: true,
+          showPreview: false,
           previewDisabled: true,
           links: [
             {
@@ -483,7 +511,7 @@ export default {
           subtitle: this.$t("juniorSoftwareDeveloper"),
           description: this.$t("maideaExperience"),
           from: new Date(1525125600000),
-          to: new Date(1547766000000),
+          to: new Date(1549006989000),
           link: "https://www.maidea.hr/"
         }
       ];

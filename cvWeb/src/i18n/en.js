@@ -14,10 +14,8 @@ export default {
     other: "Other",
     present: "Present",
     aboutMe: {
-      1: "I am a developer with a large interest in creating applications on the web and improving my knowledge and abilities as a person.",
-      2: "Born in Croatia, I grew up in a rural farm area with future intentions of seeking a career in computer technologies which was later granted to me via the technical school of Ruđer Bošković where I spent 4 years of my secondary education and in the end receiving the title of Computer technician.",
-      3: "During this time, however, I began getting interested in other topics such as programming and developing video games and thus enlisted in the Zagreb University of applied sciences, further improving my skills, getting two jobs as a junior developer and after 3 years getting the title of Bachelor of Engineering in Information Technology (bacc. ing. techn. inf.).",
-      4: "In the present time I am finishing my education in the field of Information technology with the intention of acquiring a Master's degree (struc. spec. ing. techn. inf.)."
+      1: "I am a Web Developer located in Croatia, Zagreb. I currently work as a student Junior Web Developer for Omega Software whilst finishing my Masters degree at the Zagreb University of Applied Sciences.",
+      2: "I'm always looking for new opportunities and I strive to create as many quality projects in order to improve my knowledge and skills."
     },
     omegaExperience: "Software development on multiple company projects (Čistoća, Hrvatske Autoceste, Gradska plinara Zagreb, ePlatforma) using fullstack technologies. Mentoring and creating educational Javascript content for new and future employees.",
     juniorSoftwareDeveloper: "Junior software developer",

@@ -33,27 +33,29 @@ html {
   white-space: normal;
 }
 
-body:after,
-body:before {
-  -webkit-mask-box-image: url("/mask.svg");
-}
-
-body:after,
-body:before {
-  display: block;
-  height: 650px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-body:after {
-  content: "";
-  background: linear-gradient(135deg, #ff7a18, #af002d 75%);
-  z-index: 1;
-}
-
 h2 {
   text-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 938px) {
+  body:after,
+  body:before {
+    -webkit-mask-box-image: url("/mask.svg");
+  }
+
+  body:after,
+  body:before {
+    display: block;
+    height: 450px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  body:after {
+    content: "";
+    background: linear-gradient(135deg, #ff7a18, #af002d 75%);
+    z-index: 1;
+  }
 }

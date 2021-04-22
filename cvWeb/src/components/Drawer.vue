@@ -9,8 +9,8 @@
   >
     <template #prepend>
       <div class="py-6 grey darken-4 d-flex flex-column align-center">
-        <v-avatar size="110" color="grey darken-3">
-          <v-avatar size="100">
+        <v-avatar size="130" color="grey darken-3">
+          <v-avatar size="120">
             <v-img alt="Me" src="/me.png" class="rounded-circle" />
           </v-avatar>
         </v-avatar>

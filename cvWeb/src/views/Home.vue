@@ -261,6 +261,18 @@
         </v-list-item>
       </v-list>
     </v-col>
+    <v-btn
+      v-show="showFab"
+      @click="scrollToTop"
+      small
+      color="orange"
+      fixed
+      fab
+      bottom
+      right
+    >
+      <v-icon large color="black">mdi-menu-up</v-icon>
+    </v-btn>
   </v-row>
 </template>
 
@@ -272,9 +284,25 @@ import LocaleMixin from "../mixins/localeMixin";
 export default {
   name: "Home",
   mixins: [LocaleMixin],
+  created() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
   methods: {
     format,
     formatDistance,
+    handleScroll() {
+      if (window.scrollY > this.percentage) {
+        this.showFab = true;
+        return;
+      }
+      this.showFab = false;
+    },
+    scrollToTop() {
+      window.scrollTo({ top: 0 });
+    },
     capitalize(s) {
       return s && s[0].toUpperCase() + s.slice(1);
     },
@@ -341,6 +369,9 @@ export default {
     }
   },
   computed: {
+    percentage() {
+      return document.documentElement.scrollHeight * 0.3;
+    },
     projects() {
       return [
         {
@@ -480,6 +511,11 @@ export default {
               name: "Diploma supplement (HR)",
               contents:
                 "https://drive.google.com/file/d/11yYwWIHhTV70wzne2YbVSEQzbwBCWKXG/view?usp=sharing"
+            },
+            {
+              name: "Final thesis",
+              contents:
+                "https://drive.google.com/file/d/1Z1zJKxcwVezULPAQMI_p7bz5TGrX6Fko/view?usp=sharing"
             }
           ]
         },
@@ -518,6 +554,7 @@ export default {
     }
   },
   data: () => ({
+    showFab: false,
     technologies: [
       {
         text: "Typescript",

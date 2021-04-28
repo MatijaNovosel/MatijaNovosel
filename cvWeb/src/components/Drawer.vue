@@ -6,12 +6,13 @@
     clipped
     class="elevation-0"
     @input="inputChanged"
+    color="grey darken-4"
   >
     <template #prepend>
-      <div class="py-6 grey darken-4 d-flex flex-column align-center">
-        <v-avatar size="130" color="grey darken-3">
-          <v-avatar size="120">
-            <v-img alt="Me" src="/me.png" class="rounded-circle" />
+      <div class="py-4 d-flex flex-column align-center">
+        <v-avatar tile size="130" color="grey darken-3 rounded-lg">
+          <v-avatar rounded="lg" tile size="120" class="rounded-lg">
+            <v-img alt="Me" src="/me.png" />
           </v-avatar>
         </v-avatar>
         <span class="gradient-text font-weight-bold text-h5 mt-4">
@@ -20,24 +21,23 @@
       </div>
     </template>
     <v-divider />
-    <v-list nav dense>
+    <v-list dense nav>
       <v-list-item
         @click="scrollTo(item.target)"
-        class="ml-2"
         v-for="(item, i) in items"
         :key="i"
       >
         <v-list-item-icon>
-          <v-icon v-text="item.icon" />
+          <v-icon color="grey lighten-1" v-text="item.icon" />
         </v-list-item-icon>
         <v-list-item-content>
           <v-list-item-title v-text="item.text" />
         </v-list-item-content>
       </v-list-item>
     </v-list>
+    <v-divider />
     <template v-if="$vuetify.breakpoint.mdAndUp">
-      <v-divider />
-      <div class="d-flex justify-center mt-4">
+      <div class="d-flex justify-center mt-3">
         <v-img
           @click="switchLocale('en')"
           style="cursor: pointer"

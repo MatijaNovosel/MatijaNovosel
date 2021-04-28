@@ -1,279 +1,288 @@
 <template>
-  <v-row class="pb-4 px-3">
-    <v-col cols="12" class="mt-5" id="aboutMe" style="z-index: 3">
-      <h2>{{ $t("sections.aboutMe") }}</h2>
-    </v-col>
-    <v-col cols="12" style="z-index: 3">
-      <v-card rounded="lg">
-        <v-toolbar height="25" elevation="0" />
-        <v-card-text class="text-subtitle-1">
-          <p>
-            {{ $t("aboutMe.1") }}
-          </p>
-          <p>
-            {{ $t("aboutMe.2") }}
-          </p>
-        </v-card-text>
-      </v-card>
-    </v-col>
-    <v-col cols="12" id="workExperience" style="z-index: 3">
-      <h2>{{ $t("sections.workExperience") }}</h2>
-    </v-col>
-    <v-col cols="12" style="z-index: 3">
-      <v-timeline :dense="$vuetify.breakpoint.smAndDown">
-        <v-timeline-item
-          color="orange"
-          v-for="(workExperience, i) in workExperiences"
-          fill-dot
-          small
-          :key="i"
-        >
-          <span slot="opposite">
-            <div
-              v-html="formatWorkDate(workExperience.from, workExperience.to)"
-            />
-          </span>
-          <v-card rounded="lg">
-            <v-app-bar height="10" />
-            <div class="pa-4">
-              <v-card-title class="orange--text font-weight-bold">
-                <a
-                  class="text-decoration-none orange--text font-weight-bold"
-                  :class="{
-                    'text-h6': $vuetify.breakpoint.mdAndUp,
-                    'text-subtitle-1': $vuetify.breakpoint.smAndDown
-                  }"
-                  :href="workExperience.link"
-                >
-                  {{ workExperience.title }}
-                  <v-icon small color="grey">mdi-open-in-new</v-icon>
-                </a>
-              </v-card-title>
-              <v-card-subtitle
-                class="grey--text text--darken-2 font-weight-bold"
-              >
-                {{ workExperience.subtitle }}
-              </v-card-subtitle>
-              <v-card-text>
-                {{ workExperience.description }}
-              </v-card-text>
-            </div>
-          </v-card>
-        </v-timeline-item>
-      </v-timeline>
-    </v-col>
-    <v-col cols="12" id="education">
-      <h2>{{ $t("sections.education") }}</h2>
-    </v-col>
-    <v-col cols="12">
-      <v-list rounded>
-        <template v-for="(educationItem, i) in education">
-          <v-divider v-if="educationItem.divider" :key="i" />
-          <v-list-item v-else three-line :key="i">
-            <v-list-item-avatar tile>
-              <v-img
-                alt=""
-                :src="educationItem.logo"
-                v-if="educationItem.logo"
+  <v-container>
+    <v-row class="pb-4">
+      <v-col cols="12" class="mt-5" id="aboutMe" style="z-index: 3">
+        <h2>{{ $t("sections.aboutMe") }}</h2>
+      </v-col>
+      <v-col cols="12" style="z-index: 3">
+        <v-card rounded="lg">
+          <v-toolbar height="25" elevation="0" />
+          <v-card-text class="text-subtitle-1">
+            <p>
+              {{ $t("aboutMe.1") }}
+            </p>
+            <p>
+              {{ $t("aboutMe.2") }}
+            </p>
+          </v-card-text>
+        </v-card>
+      </v-col>
+      <v-col cols="12" id="workExperience" style="z-index: 3">
+        <h2>{{ $t("sections.workExperience") }}</h2>
+      </v-col>
+      <v-col cols="12" style="z-index: 3">
+        <v-timeline :dense="$vuetify.breakpoint.smAndDown">
+          <v-timeline-item
+            color="orange"
+            v-for="(workExperience, i) in workExperiences"
+            fill-dot
+            small
+            :key="i"
+          >
+            <span slot="opposite">
+              <div
+                v-html="formatWorkDate(workExperience.from, workExperience.to)"
               />
-              <v-icon large v-else>mdi-school</v-icon>
+            </span>
+            <v-card rounded="lg">
+              <v-app-bar height="10" />
+              <div class="pa-4">
+                <v-card-title class="orange--text font-weight-bold">
+                  <a
+                    class="text-decoration-none orange--text font-weight-bold"
+                    :class="{
+                      'text-h6': $vuetify.breakpoint.mdAndUp,
+                      'text-subtitle-1': $vuetify.breakpoint.smAndDown
+                    }"
+                    :href="workExperience.link"
+                  >
+                    {{ workExperience.title }}
+                    <v-icon small color="grey">mdi-open-in-new</v-icon>
+                  </a>
+                </v-card-title>
+                <v-card-subtitle
+                  class="grey--text text--darken-2 font-weight-bold"
+                >
+                  {{ workExperience.subtitle }}
+                </v-card-subtitle>
+                <v-card-text>
+                  {{ workExperience.description }}
+                </v-card-text>
+              </div>
+            </v-card>
+          </v-timeline-item>
+        </v-timeline>
+      </v-col>
+      <v-col cols="12" id="education">
+        <h2>{{ $t("sections.education") }}</h2>
+      </v-col>
+      <v-col cols="12">
+        <v-list rounded>
+          <template v-for="(educationItem, i) in education">
+            <v-divider v-if="educationItem.divider" :key="i" />
+            <v-list-item v-else three-line :key="i">
+              <v-list-item-avatar tile>
+                <v-img
+                  alt=""
+                  :src="educationItem.logo"
+                  v-if="educationItem.logo"
+                />
+                <v-icon large v-else>mdi-school</v-icon>
+              </v-list-item-avatar>
+              <v-list-item-content>
+                <v-list-item-title>
+                  <a
+                    class="text-decoration-none orange--text font-weight-bold text-h6"
+                    :href="educationItem.link"
+                  >
+                    {{ educationItem.title }}
+                    <v-icon small color="grey">mdi-open-in-new</v-icon>
+                  </a>
+                </v-list-item-title>
+                <v-list-item-subtitle>
+                  {{ educationItem.subtitle }}
+                </v-list-item-subtitle>
+                <v-list-item-subtitle class="white--text">
+                  {{ `${educationItem.from} - ${educationItem.to}` }}
+                </v-list-item-subtitle>
+              </v-list-item-content>
+              <v-list-item-action v-if="educationItem.documents">
+                <v-menu bottom left>
+                  <template #activator="{ on, attrs }">
+                    <v-btn dark icon v-bind="attrs" v-on="on">
+                      <v-icon>mdi-dots-vertical</v-icon>
+                    </v-btn>
+                  </template>
+                  <v-list dense>
+                    <v-list-item
+                      @click="openInNew(document.contents)"
+                      v-for="(document, i) in educationItem.documents"
+                      :key="i"
+                    >
+                      <v-list-item-title>
+                        {{ document.name }}
+                        <v-icon color="orange" class="ml-2" small>
+                          mdi-google-drive
+                        </v-icon>
+                      </v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-list-item-action>
+            </v-list-item>
+          </template>
+        </v-list>
+      </v-col>
+      <v-col cols="12" id="technologies">
+        <h2>{{ $t("sections.technologies") }}</h2>
+      </v-col>
+      <v-col cols="12">
+        <v-row>
+          <v-col cols="12" class="pb-0">
+            <h3 class="grey--text text--lighten-1">{{ $t("frontend") }}</h3>
+          </v-col>
+          <v-col cols="12">
+            <v-chip
+              :color="technology.color"
+              label
+              class="ma-1"
+              v-for="(technology, i) in technologies.filter(
+                (x) => x.group == 'frontend'
+              )"
+              :key="i"
+            >
+              <v-img
+                max-height="15"
+                max-width="15"
+                class="mr-3"
+                :src="`/icons/${technology.logo}.svg`"
+              />
+              {{ technology.text }}
+            </v-chip>
+          </v-col>
+          <v-col cols="12" class="pb-0">
+            <h3 class="grey--text text--lighten-1">{{ $t("backend") }}</h3>
+          </v-col>
+          <v-col cols="12">
+            <v-chip
+              :color="technology.color"
+              label
+              class="ma-1"
+              v-for="(technology, i) in technologies.filter(
+                (x) => x.group == 'backend'
+              )"
+              :key="i"
+            >
+              <v-img
+                max-height="15"
+                max-width="15"
+                class="mr-3"
+                :src="`/icons/${technology.logo}.svg`"
+              />
+              {{ technology.text }}
+            </v-chip>
+          </v-col>
+          <v-col cols="12" class="pb-0">
+            <h3 class="grey--text text--lighten-1">{{ $t("other") }}</h3>
+          </v-col>
+          <v-col cols="12">
+            <v-chip
+              :color="technology.color"
+              label
+              class="ma-1"
+              v-for="(technology, i) in technologies.filter(
+                (x) => x.group == 'other'
+              )"
+              :key="i"
+            >
+              <v-img
+                max-height="15"
+                max-width="15"
+                class="mr-3"
+                :src="`/icons/${technology.logo}.svg`"
+              />
+              {{ technology.text }}
+            </v-chip>
+          </v-col>
+        </v-row>
+      </v-col>
+      <v-col cols="12" id="projects">
+        <h2>{{ $t("sections.projects") }}</h2>
+      </v-col>
+      <v-col cols="12">
+        <v-row>
+          <v-col
+            cols="12"
+            md="6"
+            lg="4"
+            xl="3"
+            :key="i"
+            v-for="(project, i) in projects"
+          >
+            <v-card rounded="lg">
+              <v-app-bar height="15" />
+              <v-card-title class="orange--text">
+                {{ project.title }}
+              </v-card-title>
+              <v-card-subtitle>
+                {{ project.description }}
+              </v-card-subtitle>
+              <v-divider />
+              <v-card-actions class="justify-end">
+                <v-btn
+                  @click="openInNew(link.url)"
+                  icon
+                  v-for="(link, j) in project.links"
+                  :key="j"
+                >
+                  <v-icon v-text="link.icon" />
+                </v-btn>
+                <v-btn
+                  icon
+                  v-if="project.showPreview"
+                  :disabled="project.previewDisabled"
+                >
+                  <v-icon>mdi-eye</v-icon>
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-col>
+      <v-col cols="12" id="contact">
+        <h2>{{ $t("sections.contact") }}</h2>
+      </v-col>
+      <v-col cols="12">
+        <v-list>
+          <v-list-item v-for="(contact, i) in contacts" :key="i">
+            <v-list-item-avatar>
+              <v-icon v-text="contact.icon" />
             </v-list-item-avatar>
             <v-list-item-content>
-              <v-list-item-title>
-                <a
-                  class="text-decoration-none orange--text font-weight-bold text-h6"
-                  :href="educationItem.link"
-                >
-                  {{ educationItem.title }}
-                  <v-icon small color="grey">mdi-open-in-new</v-icon>
-                </a>
+              <v-list-item-title class="orange--text">
+                {{ contact.title }}
               </v-list-item-title>
               <v-list-item-subtitle>
-                {{ educationItem.subtitle }}
-              </v-list-item-subtitle>
-              <v-list-item-subtitle class="white--text">
-                {{ `${educationItem.from} - ${educationItem.to}` }}
+                <a
+                  v-if="contact.title != 'Email'"
+                  class="text-decoration-none grey--text text--lighten-2"
+                  :href="contact.subtitle"
+                >
+                  {{ contact.subtitle }}
+                  <v-icon small color="grey">mdi-open-in-new</v-icon>
+                </a>
+                <span v-else>
+                  {{ contact.subtitle }}
+                </span>
               </v-list-item-subtitle>
             </v-list-item-content>
-            <v-list-item-action v-if="educationItem.documents">
-              <v-menu bottom left>
-                <template #activator="{ on, attrs }">
-                  <v-btn dark icon v-bind="attrs" v-on="on">
-                    <v-icon>mdi-dots-vertical</v-icon>
-                  </v-btn>
-                </template>
-                <v-list dense>
-                  <v-list-item
-                    @click="openInNew(document.contents)"
-                    v-for="(document, i) in educationItem.documents"
-                    :key="i"
-                  >
-                    <v-list-item-title>
-                      {{ document.name }}
-                      <v-icon color="orange" class="ml-2" small>
-                        mdi-google-drive
-                      </v-icon>
-                    </v-list-item-title>
-                  </v-list-item>
-                </v-list>
-              </v-menu>
-            </v-list-item-action>
           </v-list-item>
-        </template>
-      </v-list>
-    </v-col>
-    <v-col cols="12" id="technologies">
-      <h2>{{ $t("sections.technologies") }}</h2>
-    </v-col>
-    <v-col cols="12">
-      <v-row>
-        <v-col cols="12" class="pb-0">
-          <h3 class="grey--text text--lighten-1">{{ $t("frontend") }}</h3>
-        </v-col>
-        <v-col cols="12">
-          <v-chip
-            :color="technology.color"
-            label
-            class="ma-1"
-            v-for="(technology, i) in technologies.filter(
-              (x) => x.group == 'frontend'
-            )"
-            :key="i"
-          >
-            <v-img
-              max-height="15"
-              max-width="15"
-              class="mr-3"
-              :src="`/icons/${technology.logo}.svg`"
-            />
-            {{ technology.text }}
-          </v-chip>
-        </v-col>
-        <v-col cols="12" class="pb-0">
-          <h3 class="grey--text text--lighten-1">{{ $t("backend") }}</h3>
-        </v-col>
-        <v-col cols="12">
-          <v-chip
-            :color="technology.color"
-            label
-            class="ma-1"
-            v-for="(technology, i) in technologies.filter(
-              (x) => x.group == 'backend'
-            )"
-            :key="i"
-          >
-            <v-img
-              max-height="15"
-              max-width="15"
-              class="mr-3"
-              :src="`/icons/${technology.logo}.svg`"
-            />
-            {{ technology.text }}
-          </v-chip>
-        </v-col>
-        <v-col cols="12" class="pb-0">
-          <h3 class="grey--text text--lighten-1">{{ $t("other") }}</h3>
-        </v-col>
-        <v-col cols="12">
-          <v-chip
-            :color="technology.color"
-            label
-            class="ma-1"
-            v-for="(technology, i) in technologies.filter(
-              (x) => x.group == 'other'
-            )"
-            :key="i"
-          >
-            <v-img
-              max-height="15"
-              max-width="15"
-              class="mr-3"
-              :src="`/icons/${technology.logo}.svg`"
-            />
-            {{ technology.text }}
-          </v-chip>
-        </v-col>
-      </v-row>
-    </v-col>
-    <v-col cols="12" id="projects">
-      <h2>{{ $t("sections.projects") }}</h2>
-    </v-col>
-    <v-col cols="12">
-      <v-row>
-        <v-col cols="12" md="6" lg="4" xl="3" :key="i" v-for="(project, i) in projects">
-          <v-card rounded="lg">
-            <v-app-bar height="15" />
-            <v-card-title class="orange--text">
-              {{ project.title }}
-            </v-card-title>
-            <v-card-subtitle>
-              {{ project.description }}
-            </v-card-subtitle>
-            <v-divider />
-            <v-card-actions class="justify-end">
-              <v-btn
-                @click="openInNew(link.url)"
-                icon
-                v-for="(link, j) in project.links"
-                :key="j"
-              >
-                <v-icon v-text="link.icon" />
-              </v-btn>
-              <v-btn
-                icon
-                v-if="project.showPreview"
-                :disabled="project.previewDisabled"
-              >
-                <v-icon>mdi-eye</v-icon>
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-      </v-row>
-    </v-col>
-    <v-col cols="12" id="contact">
-      <h2>{{ $t("sections.contact") }}</h2>
-    </v-col>
-    <v-col cols="12">
-      <v-list>
-        <v-list-item v-for="(contact, i) in contacts" :key="i">
-          <v-list-item-avatar>
-            <v-icon v-text="contact.icon" />
-          </v-list-item-avatar>
-          <v-list-item-content>
-            <v-list-item-title class="orange--text">
-              {{ contact.title }}
-            </v-list-item-title>
-            <v-list-item-subtitle>
-              <a
-                v-if="contact.title != 'Email'"
-                class="text-decoration-none grey--text text--lighten-2"
-                :href="contact.subtitle"
-              >
-                {{ contact.subtitle }}
-                <v-icon small color="grey">mdi-open-in-new</v-icon>
-              </a>
-              <span v-else>
-                {{ contact.subtitle }}
-              </span>
-            </v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-col>
-    <v-btn
-      v-show="showFab"
-      @click="scrollToTop"
-      small
-      color="orange"
-      fixed
-      fab
-      bottom
-      right
-    >
-      <v-icon large color="black">mdi-menu-up</v-icon>
-    </v-btn>
-  </v-row>
+        </v-list>
+      </v-col>
+      <v-btn
+        v-show="showFab"
+        @click="scrollToTop"
+        small
+        color="orange"
+        fixed
+        fab
+        bottom
+        right
+      >
+        <v-icon large color="black">mdi-menu-up</v-icon>
+      </v-btn>
+    </v-row>
+  </v-container>
 </template>
 
 <script>

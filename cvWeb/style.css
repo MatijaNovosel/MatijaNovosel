@@ -188,6 +188,7 @@ section h1 {
 
   main {
     grid-template-columns: repeat(1, 12fr);
+    padding: 75px 0px 0px 0px;
   }
 }
 

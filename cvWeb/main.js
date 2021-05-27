@@ -21,7 +21,7 @@ renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 function addSphere() {
-  for (let z = -1000; z < 2000; z += 20) {
+  for (let z = -800; z < 2000; z += 20) {
     const geometry = new THREE.SphereGeometry(0.5, 32, 32);
     const material = new THREE.MeshBasicMaterial({ color: 0xffffff });
     const sphere = new THREE.Mesh(geometry, material);
@@ -35,12 +35,9 @@ function addSphere() {
 }
 
 function animateStars() {
-  // loop through each star
   for (var i = 0; i < stars.length; i++) {
     const star = stars[i];
-    // and move it forward dependent on the mouseY position.
     star.position.z += i / 10;
-    // if the particle is too close move it to the back
     if (star.position.z > 1000) star.position.z -= 2000;
   }
 }
@@ -50,6 +47,14 @@ function render() {
   renderer.render(scene, camera);
   animateStars();
 }
+
+function onWindowResize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+window.addEventListener("resize", onWindowResize, false);
 
 addSphere();
 render();

@@ -4,100 +4,103 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
     <title>Matija Novosel</title>
   </head>
   <body>
     <canvas id="bg"></canvas>
     <main>
-      <header>
-        <h1>Hi, I'm Matija Novosel.</h1>
-        <p>
-          I am a Web Developer located in Croatia, Zagreb. Currently working as
-          a
-          <span style="color: rgb(130, 107, 107); font-weight: bold">
-            student Junior Web Developer
-          </span>
-          for Omega Software whilst finishing my Masters degree at the
-          <span style="color: rgb(130, 107, 107); font-weight: bold">
-            Zagreb University of Applied Sciences.
-          </span>
-        </p>
-        <p>
-          I'm always looking for new opportunities and I strive to create as
-          many quality projects in order to improve my knowledge and skills.
-        </p>
-      </header>
-      <section class="right-section">
-        <h1>Work experience</h1>
-        <div class="timeline" style="margin-top: 4em">
-          <div class="container left">
-            <div class="content">
-              <h2>Omega Software</h2>
-              <p style="color: rgb(255, 255, 255); font-weight: bold">
-                May 2019 - Present
-              </p>
-              <p style="color: rgb(216, 202, 202)">
-                Software development on multiple company projects (Čistoća,
-                Hrvatske Autoceste, Gradska plinara Zagreb, ePlatforma) using
-                fullstack technologies.
-              </p>
-              <p style="color: rgb(216, 202, 202)">
-                Mentoring and creating educational Javascript content for new
-                and future employees.
-              </p>
-            </div>
-          </div>
-          <div class="container right">
-            <div class="content">
-              <h2>Maidea</h2>
-              <p style="color: rgb(255, 255, 255); font-weight: bold">
-                June 2018 - February 2019
-              </p>
-              <p style="color: rgb(216, 202, 202)">
-                Software development using fullstack technologies.
-              </p>
-            </div>
-          </div>
+      <div class="row">
+        <div class="col-12 text-center">
+          <header class="container">
+            <h1>Hi, I'm Matija Novosel.</h1>
+            <p class="mt-5">
+              I am a Web Developer located in Croatia, Zagreb. Currently working
+              as a
+              <span style="color: rgb(130, 107, 107); font-weight: bold">
+                student Junior Web Developer
+              </span>
+              for Omega Software whilst finishing my Masters degree at the
+              <span style="color: rgb(130, 107, 107); font-weight: bold">
+                Zagreb University of Applied Sciences.
+              </span>
+            </p>
+            <p>
+              I'm always looking for new opportunities and I strive to create as
+              many quality projects in order to improve my knowledge and skills.
+            </p>
+          </header>
         </div>
-      </section>
-      <section>
-        <h1>Education</h1>
-        <div class="timeline" style="margin-top: 4em">
-          <div class="container left">
-            <div class="content">
-              <h2>Zagreb university of applied sciences</h2>
-              <p style="color: rgb(216, 202, 202)">
-                Masters degree
-              </p>
-              <p style="color: rgb(216, 202, 202)">
-                2020 - 2022
-              </p>
+        <div class="col-12">
+          <section>
+            <h1 class="text-center">Work experience</h1>
+            <div class="timeline" style="margin-top: 4em">
+              <div class="item-container left-item">
+                <div class="timeline-content">
+                  <h2>Omega Software</h2>
+                  <p style="color: rgb(255, 255, 255); font-weight: bold">
+                    May 2019 - Present
+                  </p>
+                  <p style="color: rgb(216, 202, 202)">
+                    Software development on multiple company projects (Čistoća,
+                    Hrvatske Autoceste, Gradska plinara Zagreb, ePlatforma)
+                    using fullstack technologies.
+                  </p>
+                  <p style="color: rgb(216, 202, 202)">
+                    Mentoring and creating educational Javascript content for
+                    new and future employees.
+                  </p>
+                </div>
+              </div>
+              <div class="item-container right-item">
+                <div class="timeline-content">
+                  <h2>Maidea</h2>
+                  <p style="color: rgb(255, 255, 255); font-weight: bold">
+                    June 2018 - February 2019
+                  </p>
+                  <p style="color: rgb(216, 202, 202)">
+                    Software development using fullstack technologies.
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="container right">
-            <div class="content">
-              <h2>Zagreb university of applied sciences</h2>
-              <p style="color: rgb(216, 202, 202)">
-                Bachelors degree
-              </p>
-              <p style="color: rgb(216, 202, 202)">
-                2017 - 2020
-              </p>
-            </div>
-          </div>
-          <div class="container left">
-            <div class="content">
-              <h2>Tehnička škola Ruđera Boškovića</h2>
-              <p style="color: rgb(216, 202, 202)">
-                Computer technician
-              </p>
-              <p style="color: rgb(216, 202, 202)">
-                2013 - 2017
-              </p>
-            </div>
-          </div>
+          </section>
         </div>
-      </section>
+        <div class="col-12">
+          <section>
+            <h1 class="text-center">Education</h1>
+            <div class="timeline" style="margin-top: 4em">
+              <div class="item-container left-item">
+                <div class="timeline-content">
+                  <h2>Zagreb university of applied sciences</h2>
+                  <p style="color: rgb(216, 202, 202)">Masters degree</p>
+                  <p style="color: rgb(216, 202, 202)">2020 - 2022</p>
+                </div>
+              </div>
+              <div class="item-container right-item">
+                <div class="timeline-content">
+                  <h2>Zagreb university of applied sciences</h2>
+                  <p style="color: rgb(216, 202, 202)">Bachelors degree</p>
+                  <p style="color: rgb(216, 202, 202)">2017 - 2020</p>
+                </div>
+              </div>
+              <div class="item-container left-item">
+                <div class="timeline-content">
+                  <h2>Tehnička škola Ruđera Boškovića</h2>
+                  <p style="color: rgb(216, 202, 202)">Computer technician</p>
+                  <p style="color: rgb(216, 202, 202)">2013 - 2017</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
     </main>
     <script type="module" src="/main.js"></script>
   </body>

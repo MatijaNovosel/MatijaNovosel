@@ -1,5 +1,4 @@
-import "./style.css";
-import * as THREE from "three";
+import * as THREE from "three"
 
 const scene = new THREE.Scene();
 const stars = [];
@@ -47,14 +46,6 @@ function render() {
   renderer.render(scene, camera);
   animateStars();
 }
-
-function onWindowResize() {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-}
-
-window.addEventListener("resize", onWindowResize, false);
 
 addSphere();
 render();

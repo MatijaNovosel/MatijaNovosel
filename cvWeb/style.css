@@ -130,6 +130,14 @@ section h1 {
     padding-right: 25px;
   }
 
+  .timeline-content p {
+    font-size: 1.1em;
+  }
+
+  .timeline-content h2 {
+    font-size: 1.7em;
+  }
+
   .item-container::before {
     left: 50px;
     border: medium solid white;
@@ -138,7 +146,7 @@ section h1 {
   }
 
   .left-item::after,
-  .right::after {
+  .right-item::after {
     left: 20px;
   }
 
@@ -152,6 +160,10 @@ section h1 {
 
   header h1 {
     font-size: 4.5rem;
+  }
+
+  header p {
+    font-size: 1.2rem;
   }
 }
 

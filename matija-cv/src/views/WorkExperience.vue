@@ -1,30 +1,66 @@
 <template>
   <v-container fill-height>
     <v-row justify="center" align="center">
-      <div style="width: 800px">
-        <v-timeline dark>
-          <v-timeline-item v-for="n in 3" :key="n" large>
-            <template #icon>
-              <v-avatar>
-                <img src="https://i.pravatar.cc/64" />
-              </v-avatar>
-            </template>
-            <template #opposite>
-              <span class="white--text text-overline">
-                October 2017 - July 2020
-              </span>
-            </template>
-            <v-card class="elevation-2 white black--text">
-              <v-card-title>
-                Junior software developer
-              </v-card-title>
-              <v-card-subtitle class="grey--text">
+      <v-timeline dark>
+        <v-timeline-item fill-dot color="white" large>
+          <template #opposite>
+            <span class="white--text text-overline">
+              July 2018 - Present
+            </span>
+          </template>
+          <v-card class="elevation-2 white black--text">
+            <v-card-title>
+              Junior fullstack software developer (student)
+            </v-card-title>
+            <v-card-subtitle class="grey--text">
+              <a
+                href="https://www.omega-software.hr"
+                class="text-decoration-none grey--text"
+              >
                 Omega software
-              </v-card-subtitle>
-            </v-card>
-          </v-timeline-item>
-        </v-timeline>
-      </div>
+              </a>
+              <v-icon small color="grey">
+                mdi-link
+              </v-icon>
+            </v-card-subtitle>
+            <v-card-text class="grey--text">
+              Software development on multiple company projects (Čistoća,
+              Hrvatske Autoceste, Gradska plinara Zagreb, ePlatforma) using
+              fullstack technologies.
+            </v-card-text>
+            <v-card-text class="grey--text pt-0">
+              Mentoring and creating educational Javascript content for new and
+              future employees.
+            </v-card-text>
+          </v-card>
+        </v-timeline-item>
+        <v-timeline-item fill-dot color="white" large side="right">
+          <template #opposite>
+            <span class="white--text text-overline">
+              May 2017 - February 2018
+            </span>
+          </template>
+          <v-card class="elevation-2 white black--text">
+            <v-card-title>
+              Junior fullstack software developer (student)
+            </v-card-title>
+            <v-card-subtitle class="grey--text">
+              <a
+                href="https://www.maidea.hr"
+                class="text-decoration-none grey--text"
+              >
+                Maidea
+              </a>
+              <v-icon small color="grey">
+                mdi-link
+              </v-icon>
+            </v-card-subtitle>
+            <v-card-text class="grey--text">
+              Software development using fullstack technologies.
+            </v-card-text>
+          </v-card>
+        </v-timeline-item>
+      </v-timeline>
     </v-row>
   </v-container>
 </template>

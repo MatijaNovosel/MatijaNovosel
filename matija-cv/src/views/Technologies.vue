@@ -43,56 +43,77 @@ export default {
     tree: [],
     items: [
       {
-        name: ".git"
-      },
-      {
-        name: "node_modules"
-      },
-      {
-        name: "public",
+        name: "Frontend",
         children: [
           {
-            name: "static",
+            name: "Vue",
             children: [
               {
-                name: "logo.png",
+                name: "Vue 2",
+                file: "png"
+              },
+              {
+                name: "Vue 3",
+                file: "png"
+              },
+              {
+                name: "Component libraries",
+                children: [
+                  {
+                    name: "Vuetify",
+                    file: "png"
+                  },
+                  {
+                    name: "Bulma",
+                    file: "png"
+                  },
+                  {
+                    name: "Quasar",
+                    file: "png"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            name: "React",
+            file: "png"
+          },
+          {
+            name: "Angular",
+            file: "png"
+          },
+          {
+            name: "Svelte",
+            file: "png"
+          }
+        ]
+      },
+      {
+        name: "Backend",
+        children: [
+          {
+            name: ".NET",
+            children: [
+              {
+                name: "Core",
+                file: "png"
+              },
+              {
+                name: "MVC",
                 file: "png"
               }
             ]
           },
           {
-            name: "favicon.ico",
+            name: "PHP",
             file: "png"
           },
           {
-            name: "index.html",
-            file: "html"
+            name: "Java",
+            file: "png"
           }
         ]
-      },
-      {
-        name: ".gitignore",
-        file: "txt"
-      },
-      {
-        name: "babel.config.js",
-        file: "js"
-      },
-      {
-        name: "package.json",
-        file: "json"
-      },
-      {
-        name: "README.md",
-        file: "md"
-      },
-      {
-        name: "vue.config.js",
-        file: "js"
-      },
-      {
-        name: "yarn.lock",
-        file: "txt"
       }
     ]
   })

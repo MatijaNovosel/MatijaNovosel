@@ -3,7 +3,7 @@
     <v-row justify="center" align="center">
       <v-col cols="12" class="text-center">
         <h1 class="white--text display-2 font-weight-bold mb-3">
-          Hello, I'm Matija Novosel.
+          Hello, I'm Matija Novosel 👋
         </h1>
       </v-col>
       <div class="white--text text-center" style="width: 800px">

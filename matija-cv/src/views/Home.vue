@@ -34,19 +34,34 @@
       </v-col>
       <div class="d-flex justify-center">
         <v-btn icon large color="white">
-          <v-icon>
-            mdi-linkedin
-          </v-icon>
+          <a
+            class="text-decoration-none white--text"
+            href="https://www.linkedin.com/in/matija-novosel-616403161/"
+          >
+            <v-icon>
+              mdi-linkedin
+            </v-icon>
+          </a>
         </v-btn>
         <v-btn icon large color="white">
-          <v-icon>
-            mdi-github
-          </v-icon>
+          <a
+            class="text-decoration-none white--text"
+            href="https://github.com/MatijaNovosel"
+          >
+            <v-icon>
+              mdi-github
+            </v-icon>
+          </a>
         </v-btn>
         <v-btn icon large color="white">
-          <v-icon>
-            mdi-email
-          </v-icon>
+          <a
+            class="text-decoration-none white--text"
+            href="mailto:mnovosel5@gmail.com"
+          >
+            <v-icon>
+              mdi-email
+            </v-icon>
+          </a>
         </v-btn>
       </div>
     </v-row>

@@ -1,25 +1,8 @@
 <template>
   <v-container fill-height>
     <v-row justify="center" align="center">
-      <v-col cols="12">
-        <v-treeview
-          dark
-          v-model="tree"
-          :open="initiallyOpen"
-          :items="items"
-          activatable
-          item-key="name"
-          open-on-click
-        >
-          <template v-slot:prepend="{ item, open }">
-            <v-icon v-if="!item.file">
-              {{ open ? "mdi-folder-open" : "mdi-folder" }}
-            </v-icon>
-            <v-icon v-else>
-              {{ files[item.file] }}
-            </v-icon>
-          </template>
-        </v-treeview>
+      <v-col cols="12" class="white--text">
+        Work in progress ...
       </v-col>
     </v-row>
   </v-container>

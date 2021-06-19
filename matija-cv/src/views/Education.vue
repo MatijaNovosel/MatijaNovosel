@@ -1,7 +1,7 @@
 <template>
   <v-container fill-height>
-    <v-row justify="center" align="center">
-      <v-timeline dark class="pa-10">
+    <v-row justify="center">
+      <v-timeline :dense="$vuetify.breakpoint.smAndDown" dark class="pa-10">
         <v-timeline-item
           fill-dot
           v-for="(item, n) in items"

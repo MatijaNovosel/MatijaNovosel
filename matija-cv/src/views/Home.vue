@@ -2,11 +2,23 @@
   <v-container fill-height>
     <v-row justify="center" align="center">
       <v-col cols="12" class="text-center">
-        <h1 class="white--text display-2 font-weight-bold mb-3">
+        <span
+          :class="{
+            'display-2': $vuetify.breakpoint.mdAndUp,
+            'text-h4': $vuetify.breakpoint.smAndDown
+          }"
+          class="white--text font-weight-bold pb-5"
+        >
           Hello, I'm Matija Novosel 👋
-        </h1>
+        </span>
       </v-col>
-      <div class="white--text text-center" style="width: 800px">
+      <div
+        class="white--text text-center"
+        :style="$vuetify.breakpoint.mdAndUp ? { width: '800px' } : {}"
+        :class="{
+          'text-subtitle-2 px-5': $vuetify.breakpoint.smAndDown
+        }"
+      >
         <p>
           I am a Web Developer located in Zagreb, Croatia. Currently working as
           a student Junior Web Developer for Omega Software whilst finishing my

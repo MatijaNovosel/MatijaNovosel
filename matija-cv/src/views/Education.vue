@@ -1,7 +1,7 @@
 <template>
   <v-container fill-height>
     <v-row justify="center">
-      <v-timeline :dense="$vuetify.breakpoint.smAndDown" dark class="pa-10">
+      <v-timeline :dense="$vuetify.breakpoint.smAndDown" class="pa-10">
         <v-timeline-item
           fill-dot
           v-for="(item, n) in items"
@@ -20,7 +20,11 @@
             </span>
           </template>
           <v-card class="elevation-2 white black--text">
-            <v-card-title>
+            <v-card-title
+              :class="{
+                'text-subtitle-2': $vuetify.breakpoint.smAndDown
+              }"
+            >
               {{ item.title }}
             </v-card-title>
             <v-card-subtitle class="grey--text">
@@ -31,6 +35,10 @@
                 mdi-link
               </v-icon>
             </v-card-subtitle>
+            <v-divider v-if="$vuetify.breakpoint.smAndDown" />
+            <v-card-text v-if="$vuetify.breakpoint.smAndDown" class="grey--text">
+              {{ item.opposite }}
+            </v-card-text>
           </v-card>
         </v-timeline-item>
       </v-timeline>
@@ -52,8 +60,7 @@ export default {
         link: "https://www.tvz.hr"
       },
       {
-        title:
-          "Bachelor's degree' (bacc. ing. techn. inf.)",
+        title: "Bachelor's degree' (bacc. ing. techn. inf.)",
         subtitle: "Zagreb university of applied sciences",
         opposite: "October 2017 - July 2020",
         image:

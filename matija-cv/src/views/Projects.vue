@@ -20,6 +20,7 @@
 
 <script>
 import ConsoleCard from "../components/ConsoleCard.vue";
+import { redirectTo } from "../helpers";
 
 export default {
   components: { ConsoleCard },
@@ -108,9 +109,7 @@ export default {
     };
   },
   methods: {
-    redirectTo(url) {
-      window.location.href = url;
-    },
+    redirectTo,
     cardClosed(id) {
       this.projects = this.projects.filter((x) => x.id !== id);
     }

@@ -32,6 +32,22 @@
           </p>
         </div>
       </v-col>
+      <v-col cols="12" class="text-center pt-0">
+        <v-btn
+          outlined
+          color="white"
+          @click="
+            redirectTo(
+              'https://drive.google.com/file/d/15PyJpN88XiPKKwTnjNJ5NzcTpK5Ibegb/view?usp=sharing'
+            )
+          "
+        >
+          <v-icon class="mr-2" small>
+            mdi-google-drive
+          </v-icon>
+          Get my CV
+        </v-btn>
+      </v-col>
       <div class="d-flex justify-center">
         <v-btn icon large color="white">
           <a
@@ -69,7 +85,12 @@
 </template>
 
 <script>
+import { redirectTo } from "../helpers";
+
 export default {
-  name: "Home"
+  name: "Home",
+  methods: {
+    redirectTo
+  }
 };
 </script>

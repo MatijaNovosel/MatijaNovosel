@@ -1,7 +1,15 @@
 <template>
   <v-container fill-height>
-    <v-row justify="center">
-      <v-timeline :dense="$vuetify.breakpoint.smAndDown" class="pa-10">
+    <v-row
+      justify="center"
+      :class="{
+        'pr-4': $vuetify.breakpoint.smAndDown
+      }"
+    >
+      <v-timeline
+        :dense="$vuetify.breakpoint.smAndDown"
+        :class="{ 'pa-10': $vuetify.breakpoint.mdAndUp }"
+      >
         <v-timeline-item
           fill-dot
           v-for="(item, n) in items"
@@ -38,7 +46,12 @@
             <v-divider v-if="item.attachments" />
             <v-card-text class="py-0" v-if="item.attachments">
               <v-list dense>
-                <v-list-item two-line v-for="(item, i) in item.attachments" :key="i" @click="redirectTo(item.link)">
+                <v-list-item
+                  two-line
+                  v-for="(item, i) in item.attachments"
+                  :key="i"
+                  @click="redirectTo(item.link)"
+                >
                   <v-list-item-avatar class="my-0">
                     <v-icon color="red" v-text="item.icon" />
                   </v-list-item-avatar>
@@ -54,7 +67,10 @@
               </v-list>
             </v-card-text>
             <v-divider v-if="$vuetify.breakpoint.smAndDown" />
-            <v-card-text v-if="$vuetify.breakpoint.smAndDown" class="grey--text">
+            <v-card-text
+              v-if="$vuetify.breakpoint.smAndDown"
+              class="grey--text"
+            >
               {{ item.opposite }}
             </v-card-text>
           </v-card>
@@ -91,19 +107,22 @@ export default {
         link: "https://www.tvz.hr",
         attachments: [
           {
-            link: "https://drive.google.com/file/d/1_lZiW1ffznlU3fIBaDqnMld1JhqXKf1z/view?usp=sharing",
+            link:
+              "https://drive.google.com/file/d/1_lZiW1ffznlU3fIBaDqnMld1JhqXKf1z/view?usp=sharing",
             title: "Diploma supplement (en)",
             subtitle: "Google drive",
             icon: "mdi-file-pdf"
           },
           {
-            link: "https://drive.google.com/file/d/11yYwWIHhTV70wzne2YbVSEQzbwBCWKXG/view?usp=sharing",
+            link:
+              "https://drive.google.com/file/d/11yYwWIHhTV70wzne2YbVSEQzbwBCWKXG/view?usp=sharing",
             title: "Diploma supplement (hr)",
             subtitle: "Google drive",
             icon: "mdi-file-pdf"
           },
           {
-            link: "https://drive.google.com/file/d/1R5Lxa0Uv4RjqcQ7qR0WZUsU7PAJmcKJm/view?usp=sharing",
+            link:
+              "https://drive.google.com/file/d/1R5Lxa0Uv4RjqcQ7qR0WZUsU7PAJmcKJm/view?usp=sharing",
             title: "Final thesis",
             subtitle: "Google drive",
             icon: "mdi-file-pdf"

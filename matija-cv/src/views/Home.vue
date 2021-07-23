@@ -21,10 +21,7 @@
           }"
         >
           <p>
-            I am a Web Developer located in Zagreb, Croatia. Currently working
-            as a student Junior Web Developer for Omega Software whilst
-            finishing my Masters degree at the Zagreb University of Applied
-            Sciences.
+            I am a Web Developer located in Zagreb, Croatia. Currently a student finishing my Masters degree at the Zagreb University of Applied Sciences.
           </p>
           <p>
             I'm always looking for new opportunities and I strive to create as

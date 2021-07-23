@@ -5,7 +5,7 @@
         <v-timeline-item fill-dot color="white">
           <template #opposite>
             <span class="white--text text-overline">
-              July 2018 - Present
+              July 2018 - July 2020
             </span>
           </template>
           <v-card class="elevation-2 white black--text">

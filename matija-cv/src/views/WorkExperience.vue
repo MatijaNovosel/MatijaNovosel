@@ -5,7 +5,7 @@
         <v-timeline-item fill-dot color="white">
           <template #opposite>
             <span class="white--text text-overline">
-              July 2018 - July 2020
+              July 2019 - July 2021
             </span>
           </template>
           <v-card class="elevation-2 white black--text">
@@ -42,7 +42,7 @@
               v-if="$vuetify.breakpoint.smAndDown"
               class="grey--text"
             >
-              July 2018 - Present
+              July 2019 - July 2021
             </v-card-text>
           </v-card>
         </v-timeline-item>

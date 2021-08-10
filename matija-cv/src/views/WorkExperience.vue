@@ -80,7 +80,7 @@
               v-if="$vuetify.breakpoint.smAndDown"
               class="grey--text"
             >
-              May 2017 - February 2018
+              May 2018 - February 2019
             </v-card-text>
           </v-card>
         </v-timeline-item>
@@ -91,6 +91,6 @@
 
 <script>
 export default {
-  name: "Education"
+  name: "WorkExperience"
 };
 </script>

@@ -73,17 +73,6 @@ export default {
           ]
         },
         {
-          id: 5,
-          title: "OnexProjekti",
-          subtitle: "Construction company website",
-          links: [
-            {
-              url: "https://onexprojekti.hr/",
-              github: false
-            }
-          ]
-        },
-        {
           id: 6,
           title: "Heroes of crimson",
           subtitle: "Bullet hell RPG roguelike",

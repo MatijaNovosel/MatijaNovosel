@@ -49,7 +49,7 @@
         <v-timeline-item fill-dot color="white" side="right">
           <template #opposite>
             <span class="white--text text-overline">
-              May 2017 - February 2018
+              May 2018 - February 2019
             </span>
           </template>
           <v-card class="elevation-2 white black--text">

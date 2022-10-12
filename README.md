@@ -6,6 +6,6 @@
 <p align="center">
   <samp>
     <a href="https://matijanovosel.com">Website</a> |
-    <a href="https://linkedin.com/in/atinux/">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/matijanovosel">LinkedIn</a>
   </samp>
 </p>

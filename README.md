@@ -8,6 +8,7 @@
 <p align="center">
   <samp>
     <a href="https://matijanovosel.com">Website</a> |
-    <a href="https://www.linkedin.com/in/matijanovosel">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/matijanovosel">LinkedIn</a> |
+    <a href="https://dev.to/matijanovosel">dev.to</a>
   </samp>
 </p>

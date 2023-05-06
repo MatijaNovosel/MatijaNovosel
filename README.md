@@ -23,6 +23,6 @@
   <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=MatijaNovosel&repo=vue-material-time-picker" />
 </a>
 
-<a href="https://github.com/MatijaNovosel/degree-picker">
+<a href="https://github.com/MatijaNovosel/vue-degree-picker">
   <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=MatijaNovosel&repo=vue-degree-picker" />
 </a>

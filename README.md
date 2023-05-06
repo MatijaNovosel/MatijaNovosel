@@ -15,6 +15,14 @@
   </samp>
 </div>
 
-![](https://github-readme-stats.vercel.app/api/pin/?username=MatijaNovosel&repo=vue-tree-view)
-![](https://github-readme-stats.vercel.app/api/pin/?username=MatijaNovosel&repo=vue-degree-picker)
-![](https://github-readme-stats.vercel.app/api/pin/?username=MatijaNovosel&repo=vue-material-time-picker)
+<a href="https://github.com/MatijaNovosel/vue-tree-view">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=MatijaNovosel&repo=vue-tree-view" />
+</a>
+
+<a href="https://github.com/MatijaNovosel/vue-material-time-picker">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=MatijaNovosel&repo=vue-material-time-picker" />
+</a>
+
+<a href="https://github.com/MatijaNovosel/degree-picker">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=MatijaNovosel&repo=vue-degree-picker" />
+</a>

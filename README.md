@@ -13,20 +13,9 @@
   <samp>
     Some of my custom components: <br /> <br />
   </samp>
+  <samp>
+    <a href="https://github.com/MatijaNovosel/vue-material-time-picker">🕐 Material time picker</a> |
+    <a href="https://github.com/MatijaNovosel/vue-tree-view">🌳 Tree view</a> |
+    <a href="https://github.com/MatijaNovosel/vue-degree-picker">📐 Degree picker</a>
+  </samp>
 </div>
-
-<a href="https://github.com/MatijaNovosel/vue-tree-view">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=MatijaNovosel&repo=vue-tree-view" />
-</a>
-
-<br />
-
-<a href="https://github.com/MatijaNovosel/vue-material-time-picker">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=MatijaNovosel&repo=vue-material-time-picker" />
-</a>
-
-<br />
-
-<a href="https://github.com/MatijaNovosel/vue-degree-picker">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=MatijaNovosel&repo=vue-degree-picker" />
-</a>

@@ -17,6 +17,6 @@
     <a href="https://github.com/MatijaNovosel/vue-material-time-picker">🕐 Material time picker</a> |
     <a href="https://github.com/MatijaNovosel/vue-tree-view">🌳 Tree view</a> |
     <a href="https://github.com/MatijaNovosel/vue-degree-picker">📐 Degree picker</a> |
-    <a href="https://github.com/MatijaNovosel/vue-tri-state-checkbox">☑️ Tri state checkbox</a>
+    <a href="https://github.com/MatijaNovosel/tri-state-checkbox">☑️ Tri state checkbox</a>
   </samp>
 </div>

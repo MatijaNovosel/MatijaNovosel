@@ -14,6 +14,7 @@
     Some of my custom components: <br /> <br />
   </samp>
   <samp>
+    <a href="https://github.com/MatijaNovosel/avatar-editor">🖼️ Avatar editor</a> |
     <a href="https://github.com/MatijaNovosel/vue-material-time-picker">🕐 Material time picker</a> |
     <a href="https://github.com/MatijaNovosel/vue-tree-view">🌳 Tree view</a> |
     <a href="https://github.com/MatijaNovosel/vue-degree-picker">📐 Degree picker</a> |

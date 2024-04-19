@@ -5,9 +5,11 @@
     <a href="https://dev.to/matijanovosel">dev.to</a>
   </samp>
 </p>
-<samp>
-  Hi, I'm a programmer from Croatia. Sometimes I make stuff.<br/><br />
-</samp>
+<p align="center">
+  <samp>
+    Hi, I'm a programmer from Croatia. Sometimes I make stuff.<br/><br />
+  </samp>
+</p>
 <p align="center">
   <samp>
     My custom components: <br /> <br />

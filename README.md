@@ -6,12 +6,11 @@
   </samp>
 </p>
 <samp>
-  Hi, I'm a programmer from Croatia. I like developing applications of all sorts and have been interested in doing so from a young age.<br/><br />
-  Besides programming I enjoy video games, reading, drawing and listening to music. <br /> <br />
+  Hi, I'm a programmer from Croatia. Sometimes I make stuff.<br/><br />
 </samp>
 <p align="center">
   <samp>
-    Some of my custom components: <br /> <br />
+    My custom components: <br /> <br />
   </samp>
   <samp>
     <a href="https://github.com/MatijaNovosel/avatar-editor">🖼️ Avatar editor</a> |
